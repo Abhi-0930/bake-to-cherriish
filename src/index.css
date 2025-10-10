@@ -1,0 +1,176 @@
+@import "tailwindcss";
+
+/* Bakery Color Palette */
+:root {
+  --bakery-strawberry-pink: #F7B2B7;
+  --bakery-vanilla-cream: #FFF7E0;
+  --bakery-chocolate-brown: #6B4F39;
+  --bakery-raspberry-red: #E55472;
+  --bakery-mint-green: #A8E6CF;
+  --bakery-white: #FFFFFF;
+  
+  --color-primary: var(--bakery-strawberry-pink);
+  --color-primary-hover: #f59ca3;
+  --color-primary-active: #f28691;
+  --color-background: var(--bakery-vanilla-cream);
+  --color-surface: var(--bakery-white);
+  --color-text: var(--bakery-chocolate-brown);
+  --color-text-secondary: #8b6b52;
+  --color-accent: var(--bakery-raspberry-red);
+  --color-success: var(--bakery-mint-green);
+  
+  /* Typography */
+  --font-family-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-body);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom utility classes */
+.surface {
+  background-color: var(--color-surface);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-accent {
+  background-color: var(--color-accent);
+}
+
+.bg-success {
+  background-color: var(--color-success);
+}
+
+/* Enhanced styling for professional look */
+.shadow-bakery {
+  box-shadow: 0 4px 20px rgba(107, 79, 57, 0.1);
+}
+
+.shadow-bakery-lg {
+  box-shadow: 0 8px 30px rgba(107, 79, 57, 0.15);
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(247, 178, 183, 0.3);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-surface);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-accent:hover {
+  background-color: #d63d5f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(229, 84, 114, 0.3);
+}
+
+/* Card hover effects */
+.card-hover {
+  transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(107, 79, 57, 0.15);
+}
+
+/* Text gradient effect */
+.text-gradient {
+  background: linear-gradient(135deg, var(--color-text), var(--color-accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Custom Scrollbar Styling */
+/* Webkit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bakery-vanilla-cream);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--bakery-strawberry-pink), var(--bakery-raspberry-red));
+  border-radius: 6px;
+  border: 2px solid var(--bakery-vanilla-cream);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--color-primary-hover), #d63d5f);
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(135deg, var(--color-primary-active), #c2344a);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--bakery-vanilla-cream);
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bakery-strawberry-pink) var(--bakery-vanilla-cream);
+}
+
+/* Hide scrollbar for specific elements */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Safari and Chrome */
+}
