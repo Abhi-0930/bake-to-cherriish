@@ -1,5 +1,5 @@
 import React from 'react';
-import img from '../assets/image.jpg';
+// import img from '../assets/image.jpg';
 
 // Import menu item images
 import classicCakeImg from '../assets/menu-items/classic-cake.jpg';
