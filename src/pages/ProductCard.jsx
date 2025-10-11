@@ -22,16 +22,16 @@ import belgiumChocolateImg from '../assets/premium-cakes/BCC.jpg';
 import redVelvetImg from '../assets/premium-cakes/Red velvet cake.jpg';
 
 // Import chef specialty images
-import mochaFudgeImg from '../assets/chef-speciality/Mocha Fudge fantasy.jpg';
-import chocoBerryImg from '../assets/chef-speciality/Choco Berry Burst.jpg';
-import tiramisuImg from '../assets/chef-speciality/Dreamy Tiramasu.jpg';
-import rasmalaiImg from '../assets/chef-speciality/Rasmalai Magic.jpg';
-import bananaBlissImg from '../assets/chef-speciality/Banana Bliss.jpg';
-import carrotIndulgenceImg from '../assets/chef-speciality/Creamy carrot Indulgence.jpg';
+import mochaFudgeImg from '../assets/chef-speciality/Mocha fudge fantasy.jpg';
+import chocoBerryImg from '../assets/chef-speciality/Choco berry burst.jpg';
+import tiramisuImg from '../assets/chef-speciality/Dreamy tiramasu.jpg';
+import rasmalaiImg from '../assets/chef-speciality/Rasmalai magic.jpg';
+import bananaBlissImg from '../assets/chef-speciality/Banana bliss.jpg';
+import carrotIndulgenceImg from '../assets/chef-speciality/Creamy carrot indulgence.jpg';
 import honeyCharmImg from '../assets/chef-speciality/Golden honey charm.jpg';
-import apricotPassionImg from '../assets/chef-speciality/Apricot Passion.jpg';
+import apricotPassionImg from '../assets/chef-speciality/Apricot passion.jpg';
 import cheesecakeImg from '../assets/chef-speciality/Sugar cloud cheesecake.jpg';
-import guiltFreeImg from '../assets/chef-speciality/Guiltfree Goodness.jpg';
+import guiltFreeImg from '../assets/chef-speciality/Guiltfree goodness.jpg';
 
 // Import brownie images
 import classicBrownieImg from '../assets/brownies/Classic Brownie 2.jpg';
