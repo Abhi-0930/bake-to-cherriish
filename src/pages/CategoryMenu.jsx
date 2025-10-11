@@ -17,17 +17,17 @@ const categoryImages = {
   'Brownies': brownieImg,
   'Cookies': cookieImg,
   'Muffins & Cupcakes': muffinsImg,
-  'Treats': treatsImg // fallback to default image
+  'All Treats': treatsImg
 };
 
 const categories = [
   { label: 'Classic Cakes', href: '#menu' },
   { label: 'Premium Cakes', href: '#premium' },
   { label: "Chef's Specials", href: '#chef-specials' },
-  { label: 'Brownies', href: '#treats' },
-  { label: 'Cookies', href: '#treats' },
-  { label: 'Muffins & Cupcakes', href: '#treats' },
-  { label: 'Treats', href: '#treats' }
+  { label: 'Brownies', href: '#brownies' },
+  { label: 'Cookies', href: '#cookies' },
+  { label: 'Muffins & Cupcakes', href: '#muffins' },
+  { label: 'All Treats', href: '#treats' }
 ];
 
 const CategoryMenu = ({ selectedCategory, onSelect }) => {

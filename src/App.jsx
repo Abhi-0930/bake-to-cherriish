@@ -6,6 +6,7 @@ import Hero from './pages/Hero';
 import CategoryMenu from './pages/CategoryMenu';
 import MenuSection from './pages/MenuSection';
 import TreatsSection from './pages/TreatSection';
+import IndividualTreatSection from './pages/IndividualTreatSection';
 import NoResults from './pages/NoResults';
 import FilterPanel from './pages/FilterModal';
 import Footer from './pages/Footer';
@@ -207,6 +208,28 @@ const App = () => {
         />
       )}
       {(!selectedCategory || selectedCategory === 'chef-specials') && chefFiltered.length > 0 && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
+        </div>
+      )}
+
+      {/* Individual Treat Sections */}
+      {(!selectedCategory || selectedCategory === 'brownies') && <IndividualTreatSection treatType="brownies" searchQuery={searchQuery} />}
+      {(!selectedCategory || selectedCategory === 'brownies') && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
+        </div>
+      )}
+
+      {(!selectedCategory || selectedCategory === 'cookies') && <IndividualTreatSection treatType="cookies" searchQuery={searchQuery} />}
+      {(!selectedCategory || selectedCategory === 'cookies') && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
+        </div>
+      )}
+
+      {(!selectedCategory || selectedCategory === 'muffins') && <IndividualTreatSection treatType="muffins" searchQuery={searchQuery} />}
+      {(!selectedCategory || selectedCategory === 'muffins') && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
         </div>

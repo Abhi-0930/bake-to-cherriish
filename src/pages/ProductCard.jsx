@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImg from '../assets/image.jpg';
+// import heroImg from '../assets/image.jpg';
 
 // Import classic cake images
 import vanillaImg from '../assets/classic-cakes/Vanilla cake.jpg';
@@ -164,7 +164,7 @@ const ProductCard = ({ item, type, section }) => {
       if (type === 'single' && chefSpecialtyImages[item.name]) {
         return chefSpecialtyImages[item.name];
       }
-      return heroImg; // fallback to hero image
+      // return heroImg; // fallback to hero image
     };
 
     return (
