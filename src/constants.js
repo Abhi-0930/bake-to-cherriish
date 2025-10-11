@@ -31,8 +31,10 @@ export const menuData = {
     { name: 'Caramel Delight Cake', half: 749, full: 1249, desc: 'Soft sponge infused with caramel sauce and layered with caramel cream. Available in 1/2 kg & 1kg.', rating: 4.7, time: '40 min' },
     { name: 'Fresh Fruit Cake', half: 749, full: 1249, desc: 'Light vanilla sponge topped with whipped cream and seasonal fresh fruits. Available in 1/2 kg & 1kg.', rating: 4.6, time: '35 min' },
     { name: 'Very Berry Infused Cake', half: 749, full: 1249, desc: 'Moist vanilla sponge filled with mixed berry compote and whipped cream. Available in 1/2 kg & 1kg.', rating: 4.8, time: '40 min' },
-    { name: 'Belgium Chocolate Cake', half: 799, full: 1299, desc: 'Made with premium Belgian cocoa and layered with silky chocolate ganache. Available in 1/2 kg & 1kg.', rating: 4.9, time: '45 min', badge: 'Bestseller' },
+    { name: 'Belgian Chocolate Cake', half: 799, full: 1299, desc: 'Made with premium Belgian cocoa and layered with silky chocolate ganache. Available in 1/2 kg & 1kg.', rating: 4.9, time: '45 min', badge: 'Bestseller' },
     { name: 'Redvelvet Creamcheese Cake', half: 799, full: 1299, desc: 'Moist red velvet layers with cream cheese frosting. Rich, tangy, and indulgent. Available in 1/2 kg & 1kg.', rating: 4.9, time: '45 min', badge: 'Bestseller' }
+    
+
   ],
   chefSpeciality: [
     { name: 'Mocha Fudge Fantasy', price: 1599, desc: 'Rich coffee-infused cake with chocolate fudge layers. A perfect blend of coffee and chocolate. Available in 1kg.', rating: 4.9, time: '50 min', badge: 'Chef Special' },

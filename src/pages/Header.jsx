@@ -13,8 +13,15 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Left: Brand */}
           <div>
-            <a href="#" style={{ color: 'var(--color-text)' }} className="text-lg sm:text-xl font-bold hover:opacity-80 transition-opacity">
-              BAKE TO CHERRIISH
+            <a href="#" className="hover:opacity-80 transition-opacity flex items-center">
+              <img 
+                src="/bakery-logo.jpg" 
+                alt="BAKE TO CHERRIISH" 
+                className="h-12 sm:h-14 w-auto"
+              />
+              <span className="hidden lg:block ml-3 text-xl font-bold" style={{ color: 'var(--color-text)' }}>
+                BAKE TO CHERRIISH
+              </span>
             </a>
           </div>
 

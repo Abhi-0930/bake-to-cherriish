@@ -2,36 +2,36 @@ import React from 'react';
 import heroImg from '../assets/image.jpg';
 
 // Import classic cake images
-import vanillaImg from '../assets/classic-cakes/Vanilla cake 1.jpg';
-import pineappleImg from '../assets/classic-cakes/pineapple 1.png';
-import strawberryImg from '../assets/classic-cakes/strawberry cake.png';
-import blueberryImg from '../assets/classic-cakes/blueberry.png';
-import raspberryImg from '../assets/classic-cakes/Raspberry cake 2.jpg';
-import butterscotchImg from '../assets/classic-cakes/Butterscotch 1.jpg';
-import chocolateImg from '../assets/classic-cakes/chocolate cake 1.jpg';
-import whiteForestImg from '../assets/classic-cakes/White forest 2.jpg';
-import blackForestImg from '../assets/classic-cakes/Black forest 4.jpg';
+import vanillaImg from '../assets/classic-cakes/Vanilla cake.jpg';
+import pineappleImg from '../assets/classic-cakes/Pineapple cake.jpg';
+import strawberryImg from '../assets/classic-cakes/Strawberry cake.jpg';
+import blueberryImg from '../assets/classic-cakes/Blueberry cake.jpg';
+import raspberryImg from '../assets/classic-cakes/Rasberry cake.jpg';
+import butterscotchImg from '../assets/classic-cakes/Butterscotch cake.jpg';
+import chocolateImg from '../assets/classic-cakes/chocolate cake.jpg';
+import whiteForestImg from '../assets/classic-cakes/White forest cake.jpg';
+import blackForestImg from '../assets/classic-cakes/Black forest cake.jpg';
 
 // Import premium cake images
-import lycheeImg from '../assets/premium-cakes/Lychee cake 4.jpg';
-import tresLechesImg from '../assets/premium-cakes/Rich tres leches cake  1.jpg';
-import caramelDelightImg from '../assets/premium-cakes/Caramel delight cake 2.jpg';
-import freshFruitImg from '../assets/premium-cakes/Fresh fruit cake 4.jpg';
-import veryBerryImg from '../assets/premium-cakes/very berry infused cake 2.jpg';
-import belgiumChocolateImg from '../assets/premium-cakes/Belgium chocolate cake 1.jpg';
-import redVelvetImg from '../assets/premium-cakes/Red velvet cream cheese 3.jpg';
+import lycheeImg from '../assets/premium-cakes/Lyche cake.jpg';
+import tresLechesImg from '../assets/premium-cakes/Rich tres leches cake.jpg';
+import caramelDelightImg from '../assets/premium-cakes/Caramel delight cake.jpg';
+import freshFruitImg from '../assets/premium-cakes/Fresh fruit cake.jpg';
+import veryBerryImg from '../assets/premium-cakes/Very berry infused cake.jpg';
+import belgiumChocolateImg from '../assets/premium-cakes/BCC.jpg';
+import redVelvetImg from '../assets/premium-cakes/Red velvet cake.jpg';
 
 // Import chef specialty images
-import mochaFudgeImg from '../assets/chef-speciality/Mocha Fudge fantasy 3.jpg';
-import chocoBerryImg from '../assets/chef-speciality/Choco Berry Burst 4.jpg';
-import tiramisuImg from '../assets/chef-speciality/Dreamy Tiramisu 1.jpg';
-import rasmalaiImg from '../assets/chef-speciality/Rasmalai Magic 3.jpg';
-import bananaBlissImg from '../assets/chef-speciality/Banana Bliss 4.jpg';
-import carrotIndulgenceImg from '../assets/chef-speciality/Creamy carrot Indulgence - 3.jpg';
-import honeyCharmImg from '../assets/chef-speciality/Golden honey charm 3.jpg';
-import apricotPassionImg from '../assets/chef-speciality/Apricot Passion 4.jpg';
-import cheesecakeImg from '../assets/chef-speciality/Sugar cloud cheesecake 4.jpg';
-import guiltFreeImg from '../assets/chef-speciality/Guilt-Free Goodness - 1.jpg';
+import mochaFudgeImg from '../assets/chef-speciality/Mocha Fudge fantasy.jpg';
+import chocoBerryImg from '../assets/chef-speciality/Choco Berry Burst.jpg';
+import tiramisuImg from '../assets/chef-speciality/Dreamy Tiramasu.jpg';
+import rasmalaiImg from '../assets/chef-speciality/Rasmalai Magic.jpg';
+import bananaBlissImg from '../assets/chef-speciality/Banana Bliss.jpg';
+import carrotIndulgenceImg from '../assets/chef-speciality/Creamy carrot Indulgence.jpg';
+import honeyCharmImg from '../assets/chef-speciality/Golden honey charm.jpg';
+import apricotPassionImg from '../assets/chef-speciality/Apricot Passion.jpg';
+import cheesecakeImg from '../assets/chef-speciality/Sugar cloud cheesecake.jpg';
+import guiltFreeImg from '../assets/chef-speciality/Guiltfree Goodness.jpg';
 
 // Import brownie images
 import classicBrownieImg from '../assets/brownies/Classic Brownie 2.jpg';
@@ -77,7 +77,7 @@ const premiumCakeImages = {
   'Caramel Delight Cake': caramelDelightImg,
   'Fresh Fruit Cake': freshFruitImg,
   'Very Berry Infused Cake': veryBerryImg,
-  'Belgium Chocolate Cake': belgiumChocolateImg,
+  'Belgian Chocolate Cake': belgiumChocolateImg,
   'Redvelvet Creamcheese Cake': redVelvetImg
 };
 
@@ -125,8 +125,16 @@ const muffinImages = {
   'Mix Berry': mixBerryMuffinImg
 };
 
-const ProductCard = ({ item, type }) => {
+const ProductCard = ({ item, type, section }) => {
     const price = type === 'cake' ? item.half : type === 'muffin' ? item.muffin : item.price;
+    
+    // Get image height based on section
+    const getImageHeight = () => {
+      if (section === 'classic') return '260px';
+      if (section === 'premium') return '240px';
+      if (section === 'chef') return '240px';
+      return '220px'; // default for treats
+    };
     
     // Get the appropriate image for the item
     const getItemImage = () => {
@@ -167,7 +175,7 @@ const ProductCard = ({ item, type }) => {
         onMouseLeave={(e) => (e.currentTarget.style.borderColor = 'rgba(107,79,57,0.2)')}
       >
         {/* Image */}
-        <div className="relative" style={{ height: '180px', backgroundColor: 'var(--color-background)' }}>
+        <div className="relative" style={{ height: getImageHeight(), backgroundColor: 'var(--color-background)' }}>
           <img src={getItemImage()} alt={item.name} className="w-full h-full object-cover" />
           {/* badge removed per request */}
         </div>
@@ -181,7 +189,7 @@ const ProductCard = ({ item, type }) => {
           </div>
 
           {item.desc && (
-            <p style={{ color: 'var(--color-text)' }} className="text-sm opacity-70 mb-3 line-clamp-2">
+            <p style={{ color: 'var(--color-text)' }} className="text-sm opacity-70 mb-3">
               {item.desc}
             </p>
           )}

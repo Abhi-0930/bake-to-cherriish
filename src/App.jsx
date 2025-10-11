@@ -173,6 +173,7 @@ const App = () => {
           subtitle="Timeless favorites made with love"
           items={classicFiltered} 
           type="cake"
+          section="classic"
         />
       )}
       {(!selectedCategory || selectedCategory === 'menu') && classicFiltered.length > 0 && (
@@ -188,6 +189,7 @@ const App = () => {
             subtitle="Luxurious flavors for special moments"
             items={premiumFiltered} 
             type="cake"
+            section="premium"
           />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
@@ -201,6 +203,7 @@ const App = () => {
           subtitle="Signature creations that define excellence"
           items={chefFiltered} 
           type="single"
+          section="chef"
         />
       )}
       {(!selectedCategory || selectedCategory === 'chef-specials') && chefFiltered.length > 0 && (

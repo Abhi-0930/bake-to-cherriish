@@ -1,7 +1,7 @@
 import React from 'react';
 import ProductCard from './ProductCard';
 
-const MenuSection = ({ title, subtitle, items, type, id, showSearch = false, searchQuery = '', onSearchChange = () => {} }) => {
+const MenuSection = ({ title, subtitle, items, type, id, section, showSearch = false, searchQuery = '', onSearchChange = () => {} }) => {
     return (
       <section id={id} className="py-10" style={{ backgroundColor: 'var(--bakery-vanilla-cream)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -34,7 +34,7 @@ const MenuSection = ({ title, subtitle, items, type, id, showSearch = false, sea
           
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
             {items.map((item, index) => (
-              <ProductCard key={index} item={item} type={type} />
+              <ProductCard key={index} item={item} type={type} section={section} />
             ))}
           </div>
         </div>
