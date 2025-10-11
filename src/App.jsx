@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { colors, menuData } from './constants';
+import { menuData } from './constants';
 import { Filter } from 'lucide-react';
 import Header from './pages/Header';
 import Hero from './pages/Hero';

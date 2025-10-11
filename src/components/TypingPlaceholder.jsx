@@ -2,21 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 const TypingPlaceholder = () => {
   const [displayText, setDisplayText] = useState('');
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-
-  const words = [
-    'cakes',
-    'muffins', 
-    'brownies',
-    'cookies',
-    'chocolate',
-    'vanilla',
-    'strawberry',
-    'premium cakes',
-    'chef specials'
-  ];
 
   const baseText = 'Search for ';
   const typingSpeed = 100;
@@ -24,6 +11,18 @@ const TypingPlaceholder = () => {
   const pauseTime = 2000;
 
   useEffect(() => {
+    const words = [
+      'cakes',
+      'muffins', 
+      'brownies',
+      'cookies',
+      'chocolate',
+      'vanilla',
+      'strawberry',
+      'premium cakes',
+      'chef specials'
+    ];
+    
     const currentWord = words[currentWordIndex];
     const fullText = baseText + currentWord + '...';
 
@@ -51,7 +50,7 @@ const TypingPlaceholder = () => {
     }, isDeleting ? deletingSpeed : typingSpeed);
 
     return () => clearTimeout(timeout);
-  }, [displayText, isDeleting, currentWordIndex, words]);
+  }, [displayText, isDeleting, currentWordIndex, baseText, typingSpeed, deletingSpeed, pauseTime]);
 
   return (
     <span className="inline-block">

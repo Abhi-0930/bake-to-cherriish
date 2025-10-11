@@ -8,7 +8,7 @@ import strawberryImg from '../assets/classic-cakes/Strawberry cake.jpg';
 import blueberryImg from '../assets/classic-cakes/Blueberry cake.jpg';
 import raspberryImg from '../assets/classic-cakes/Rasberry cake.jpg';
 import butterscotchImg from '../assets/classic-cakes/Butterscotch cake.jpg';
-import chocolateImg from '../assets/classic-cakes/chocolate cake.jpg';
+import chocolateImg from '../assets/classic-cakes/Chocolate cake.jpg';
 import whiteForestImg from '../assets/classic-cakes/White forest cake.jpg';
 import blackForestImg from '../assets/classic-cakes/Black forest cake.jpg';
 
