@@ -37,7 +37,7 @@ const Hero = () => {
                     }}
                   >
                     Order from
-                  </h1>
+                </h1>
                   <span 
                     className="inline-block px-4 py-2 rounded-lg shadow-md transform hover:scale-105 transition-transform duration-300"
                     style={{ 
@@ -63,35 +63,66 @@ const Hero = () => {
                 </p>
 
                 {/* Key points */}
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3">
+                <div className="space-y-4">
+                  <div className="flex items-start space-x-3">
                     <div 
-                      className="w-2 h-2 rounded-full"
+                      className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
                       style={{ backgroundColor: 'var(--color-accent)' }}
                     ></div>
-                    <p className="text-base font-medium" style={{ color: 'var(--color-surface)' }}>
-                      Sweet memories in every bite
-                    </p>
+                    <div>
+                      <p className="text-base font-medium" style={{ color: 'var(--color-surface)' }}>
+                        Cake isn't just piece of sweet it's a sweet memory.
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-start space-x-3">
                     <div 
-                      className="w-2 h-2 rounded-full"
+                      className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
                       style={{ backgroundColor: 'var(--color-accent)' }}
                     ></div>
-                    <p className="text-base font-medium" style={{ color: 'var(--color-surface)' }}>
-                      Premium quality • Custom orders up to 5kg
-                    </p>
+                    <div>
+                      <p className="text-base font-medium" style={{ color: 'var(--color-surface)' }}>
+                        Discounts are available here on prices, don't dismiss your cravings on cake pieces.
+                      </p>
+                    </div>
                   </div>
                   
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-start space-x-3">
                     <div 
-                      className="w-2 h-2 rounded-full"
+                      className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
                       style={{ backgroundColor: 'var(--color-accent)' }}
                     ></div>
-                    <p className="text-base font-medium" style={{ color: 'var(--color-surface)' }}>
-                      Pre-order 24 hours • Fresh delivery guaranteed
-                    </p>
+                    <div>
+                      <p className="text-base font-medium" style={{ color: 'var(--color-surface)' }}>
+                        Great things take time, so please order prior.
+                      </p>
+                      <div className="mt-1 ml-4 space-y-1">
+                        <p className="text-sm opacity-80" style={{ color: 'var(--color-surface)' }}>
+                          • Pre-order before 1 day of delivery
+                        </p>
+                        <p className="text-sm opacity-80" style={{ color: 'var(--color-surface)' }}>
+                          • All kinds of customisations upto 5kgs
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start space-x-3">
+                    <div 
+                      className="w-2 h-2 rounded-full mt-2 flex-shrink-0"
+                      style={{ backgroundColor: 'var(--color-accent)' }}
+                    ></div>
+                    <div>
+                      <p className="text-base font-medium" style={{ color: 'var(--color-surface)' }}>
+                        We charge for delivery because we make sure to recharge your mood after delivery.
+                      </p>
+                      <div className="mt-1 ml-4">
+                        <p className="text-sm opacity-80" style={{ color: 'var(--color-surface)' }}>
+                          • Delivery charges applicable
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
 

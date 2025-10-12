@@ -6,9 +6,25 @@ const MenuSection = ({ title, subtitle, items, type, id, section, showSearch = f
       <section id={id} className="py-10" style={{ backgroundColor: 'var(--bakery-vanilla-cream)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-4">
-            <h3 style={{ color: 'var(--color-text)' }} className="text-2xl lg:text-3xl font-bold mb-1">
-              {title}
-            </h3>
+            <div className="flex items-center gap-3 mb-1">
+              <h3 style={{ color: 'var(--color-text)' }} className="text-2xl lg:text-3xl font-bold">
+                {title}
+              </h3>
+              {/* Eggless Indicator */}
+              <div 
+                className="flex items-center gap-1 px-2 py-1 rounded-full text-xs font-semibold"
+                style={{ 
+                  backgroundColor: '#10B981', 
+                  color: 'white'
+                }}
+              >
+                <div 
+                  className="w-3 h-3 rounded-full"
+                  style={{ backgroundColor: 'white' }}
+                ></div>
+                Eggless
+              </div>
+            </div>
             {subtitle && (
               <p style={{ color: 'var(--color-text)' }} className="opacity-70 text-base">
                 {subtitle}

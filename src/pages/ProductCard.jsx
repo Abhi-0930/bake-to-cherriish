@@ -178,17 +178,6 @@ const ProductCard = ({ item, type, section }) => {
         <div className="relative" style={{ height: getImageHeight(), backgroundColor: 'var(--color-background)' }}>
           <img src={getItemImage()} alt={item.name} className="w-full h-full object-cover" />
           
-          {/* Eggless Badge */}
-          <div 
-            className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-semibold shadow-md"
-            style={{ 
-              backgroundColor: 'var(--color-accent)', 
-              color: 'var(--color-surface)',
-              border: '1px solid rgba(255,255,255,0.2)'
-            }}
-          >
-            🥚 Eggless
-          </div>
         </div>
 
         {/* Content */}
@@ -230,8 +219,8 @@ const ProductCard = ({ item, type, section }) => {
                 </div>
               </>
             ) : (
-              <div className="flex items-center justify-between">
-                <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{price}</span>
+          <div className="flex items-center justify-between">
+            <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{price}</span>
               </div>
             )}
           </div>
