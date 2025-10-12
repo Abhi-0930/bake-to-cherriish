@@ -177,7 +177,18 @@ const ProductCard = ({ item, type, section }) => {
         {/* Image */}
         <div className="relative" style={{ height: getImageHeight(), backgroundColor: 'var(--color-background)' }}>
           <img src={getItemImage()} alt={item.name} className="w-full h-full object-cover" />
-          {/* badge removed per request */}
+          
+          {/* Eggless Badge */}
+          <div 
+            className="absolute top-3 right-3 px-2 py-1 rounded-full text-xs font-semibold shadow-md"
+            style={{ 
+              backgroundColor: 'var(--color-accent)', 
+              color: 'var(--color-surface)',
+              border: '1px solid rgba(255,255,255,0.2)'
+            }}
+          >
+            🥚 Eggless
+          </div>
         </div>
 
         {/* Content */}
