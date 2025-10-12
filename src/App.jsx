@@ -5,7 +5,6 @@ import Header from './pages/Header';
 import Hero from './pages/Hero';
 import CategoryMenu from './pages/CategoryMenu';
 import MenuSection from './pages/MenuSection';
-import TreatsSection from './pages/TreatSection';
 import IndividualTreatSection from './pages/IndividualTreatSection';
 import NoResults from './pages/NoResults';
 import FilterPanel from './pages/FilterModal';
@@ -13,7 +12,7 @@ import Footer from './pages/Footer';
 import AnimatedSearchInput from './components/AnimatedSearchInput';
 
 const App = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null); // 'menu' | 'premium' | 'chef-specials' | 'treats' | null
+  const [selectedCategory, setSelectedCategory] = useState(null); // 'menu' | 'premium' | 'chef-specials' | 'brownies' | 'cookies' | 'muffins' | null
   const [searchQuery, setSearchQuery] = useState('');
   const [isFilterModalOpen, setIsFilterModalOpen] = useState(false);
   const [filters, setFilters] = useState({
@@ -101,10 +100,9 @@ const App = () => {
   const browniesFiltered = menuData.brownies.filter(matches);
   const cookiesFiltered = menuData.cookies.filter(matches);
   const muffinsFiltered = menuData.muffins.filter(matches);
-  const hasTreatsResults = browniesFiltered.length > 0 || cookiesFiltered.length > 0 || muffinsFiltered.length > 0;
 
   // Check if there are any results at all
-  const hasAnyResults = classicFiltered.length > 0 || premiumFiltered.length > 0 || chefFiltered.length > 0 || hasTreatsResults;
+  const hasAnyResults = classicFiltered.length > 0 || premiumFiltered.length > 0 || chefFiltered.length > 0 || browniesFiltered.length > 0 || cookiesFiltered.length > 0 || muffinsFiltered.length > 0;
   
   // Check if filters are applied (not default values)
   const hasActiveFilters = filters.priceRange !== 'all' || filters.variety !== 'all' || filters.itemType !== 'all';
@@ -235,12 +233,6 @@ const App = () => {
         </div>
       )}
 
-      {(!selectedCategory || selectedCategory === 'treats') && hasTreatsResults && <TreatsSection searchQuery={searchQuery} />}
-      {(!selectedCategory || selectedCategory === 'treats') && hasTreatsResults && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="border-t mx-auto w-3/4" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
-        </div>
-      )}
 
       {/* Show No Results when search returns nothing */}
       {shouldShowNoResults && <NoResults searchQuery={searchQuery} hasActiveFilters={hasActiveFilters} filters={filters} />}

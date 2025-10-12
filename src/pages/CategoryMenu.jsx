@@ -8,7 +8,6 @@ import chefSpecialityImg from '../assets/menu-items/chef-speciality.jpg';
 import brownieImg from '../assets/menu-items/brownie.jpg';
 import cookieImg from '../assets/menu-items/cookie.jpg';
 import muffinsImg from '../assets/menu-items/muffins.jpg';
-import treatsImg from '../assets/menu-items/treats.jpg';
 // Create image mapping for menu categories
 const categoryImages = {
   'Classic Cakes': classicCakeImg,
@@ -16,8 +15,7 @@ const categoryImages = {
   "Chef's Specials": chefSpecialityImg,
   'Brownies': brownieImg,
   'Cookies': cookieImg,
-  'Muffins & Cupcakes': muffinsImg,
-  'All Treats': treatsImg
+  'Muffins & Cupcakes': muffinsImg
 };
 
 const categories = [
@@ -26,8 +24,7 @@ const categories = [
   { label: "Chef's Specials", href: '#chef-specials' },
   { label: 'Brownies', href: '#brownies' },
   { label: 'Cookies', href: '#cookies' },
-  { label: 'Muffins & Cupcakes', href: '#muffins' },
-  { label: 'All Treats', href: '#treats' }
+  { label: 'Muffins & Cupcakes', href: '#muffins' }
 ];
 
 const CategoryMenu = ({ selectedCategory, onSelect }) => {
