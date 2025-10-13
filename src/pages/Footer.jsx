@@ -20,8 +20,12 @@ const Footer = () => {
             <div>
               <h5 className="font-bold mb-4 text-lg">Contact</h5>
               <div className="space-y-2 text-sm opacity-90">
-                <p>📧 kkshravani2001@gmail.com</p>
-                <p>📞 +91 8019574555</p>
+                <p>
+                  📧 <a href="mailto:kkshravani2001@gmail.com" className="underline hover:opacity-80">kkshravani2001@gmail.com</a>
+                </p>
+                <p>
+                  📞 <a href="tel:+918019574555" className="underline hover:opacity-80">+91 8019574555</a>
+                </p>
                 <p>📍 Uppal, Hyderabad</p>
               </div>
             </div>

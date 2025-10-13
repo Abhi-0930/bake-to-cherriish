@@ -53,7 +53,7 @@ const Hero = () => {
                 
                 {/* Tagline */}
                 <p
-                  className="mb-6 text-lg font-light"
+                  className="mb-4 text-lg font-light"
                   style={{ 
                     color: 'var(--color-surface)', 
                     opacity: 0.95
@@ -126,8 +126,8 @@ const Hero = () => {
                   </div>
                 </div>
 
-                {/* Call to action */}
-                <div className="mt-8">
+                {/* Call to actions */}
+                <div className="mt-6 flex flex-wrap items-center gap-3">
                   <button 
                     onClick={() => {
                       const menuSection = document.getElementById('menu');
@@ -152,6 +152,38 @@ const Hero = () => {
                   >
                     Start Your Order →
                   </button>
+
+                  <a
+                    href="tel:+918019574555"
+                    className="px-5 py-3 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+                    style={{
+                      backgroundColor: 'rgba(255,255,255,0.12)',
+                      color: 'var(--color-surface)',
+                      border: '1.5px solid rgba(255,255,255,0.35)'
+                    }}
+                  >
+                    Call Now
+                  </a>
+
+                  <a
+                    href="https://wa.me/918019574555"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="px-5 py-3 rounded-full font-semibold flex items-center gap-2 transition-all duration-300 shadow-md hover:shadow-lg"
+                    style={{
+                      backgroundColor: '#25D366',
+                      color: '#0b3b25',
+                      border: '1.5px solid rgba(255,255,255,0.25)'
+                    }}
+                    aria-label="Chat on WhatsApp"
+                  >
+                    {/* WhatsApp icon (inline SVG) */}
+                    <svg width="18" height="18" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true">
+                      <path d="M19.11 17.23c-.29-.14-1.7-.84-1.96-.94-.26-.1-.45-.14-.64.14-.19.29-.74.94-.9 1.13-.17.19-.33.22-.62.07-.29-.14-1.22-.45-2.32-1.43-.86-.77-1.44-1.72-1.61-2.01-.17-.29-.02-.45.13-.6.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.12-.23-.55-.47-.48-.64-.48h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-1 2.43 0 1.43 1.02 2.81 1.16 3 .14.19 2 3.05 4.84 4.28.68.29 1.21.46 1.62.59.68.22 1.3.19 1.79.12.55-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.26-.19-.55-.33z"/>
+                      <path d="M27.1 4.9C24.2 2 20.3.5 16.2.5 7.9.5 1.2 7.2 1.2 15.5c0 2.5.6 4.9 1.8 7.1L.5 31.5l9-2.4c2.1 1.1 4.4 1.7 6.8 1.7 8.3 0 15-6.7 15-15 0-4.1-1.6-7.9-4.7-10.9zM16.3 28.4c-2.1 0-4.1-.6-5.9-1.6l-.4-.2-5.4 1.4 1.4-5.3-.2-.4c-1.1-1.9-1.7-4.1-1.7-6.3C4.1 8.4 9.6 2.9 16.3 2.9c3.2 0 6.2 1.2 8.5 3.5 2.3 2.3 3.5 5.3 3.5 8.5 0 6.8-5.5 12.5-12 13.5z"/>
+                    </svg>
+                    WhatsApp
+                  </a>
                 </div>
               </div>
             </div>
