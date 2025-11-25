@@ -92,6 +92,7 @@ const App = () => {
     return searchMatch && priceMatch && varietyMatch && itemTypeMatch;
   };
 
+  const christmasFiltered = menuData.christmasCakes.filter(matches);
   const classicFiltered = menuData.classicCakes.filter(matches);
   const premiumFiltered = menuData.premiumCakes.filter(matches);
   const chefFiltered = menuData.chefSpeciality.filter(matches);
@@ -102,7 +103,7 @@ const App = () => {
   const muffinsFiltered = menuData.muffins.filter(matches);
 
   // Check if there are any results at all
-  const hasAnyResults = classicFiltered.length > 0 || premiumFiltered.length > 0 || chefFiltered.length > 0 || browniesFiltered.length > 0 || cookiesFiltered.length > 0 || muffinsFiltered.length > 0;
+  const hasAnyResults = christmasFiltered.length > 0 || classicFiltered.length > 0 || premiumFiltered.length > 0 || chefFiltered.length > 0 || browniesFiltered.length > 0 || cookiesFiltered.length > 0 || muffinsFiltered.length > 0;
   
   // Check if filters are applied (not default values)
   const hasActiveFilters = filters.priceRange !== 'all' || filters.variety !== 'all' || filters.itemType !== 'all';
@@ -163,6 +164,22 @@ const App = () => {
             />
           </div>
         </div>
+      )}
+
+      {(!selectedCategory || selectedCategory === 'menu' || selectedCategory === 'christmas') && christmasFiltered.length > 0 && (
+        <>
+          <MenuSection 
+            id="christmas"
+            title="Christmas Cakes"
+            subtitle="Limited-time festive bakes fresh from Santa's kitchen"
+            items={christmasFiltered}
+            type="cake"
+            section="christmas"
+          />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
+          </div>
+        </>
       )}
 
       {(!selectedCategory || selectedCategory === 'menu') && classicFiltered.length > 0 && (

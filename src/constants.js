@@ -14,6 +14,13 @@ export const colors = {
 // MENU DATA
 // ============================================================================
 export const menuData = {
+  christmasCakes: [
+    { name: 'Santa Cupcakes', half: 599, full: 1099, desc: 'Festive vanilla cupcakes topped with Santa hats and snowy buttercream. Perfect for gifting.', rating: 4.8, time: '30 min' },
+    { name: 'Brownie Christmas Trees', half: 649, full: 1149, desc: 'Rich brownies shaped like little trees, finished with silky ganache and sprinkles.', rating: 4.9, time: '35 min' },
+    { name: 'Ginger Bread Cookies', half: 549, full: 999, desc: 'Classic gingerbread spice with a soft bite and royal icing accents.', rating: 4.7, time: '30 min' },
+    { name: 'Plum Cake', half: 699, full: 1249, desc: 'Slow-baked plum cake packed with candied fruits, nuts, and warm spices.', rating: 4.9, time: '45 min' },
+    { name: 'Banana Bread', half: 599, full: 1099, desc: 'Moist banana loaf infused with cinnamon and topped with a sugar glaze.', rating: 4.6, time: '35 min' }
+  ],
   classicCakes: [
     { name: 'Vanilla Cake', half: 499, full: 899, desc: 'Soft vanilla sponge with smooth vanilla cream. Light, sweet, and perfect for any occasion. Available in 1/2 kg & 1kg.', rating: 4.5, time: '30 min' },
     { name: 'Pineapple Cake', half: 549, full: 949, desc: 'Light vanilla sponge with whipped cream and pineapple chunks. A tropical delight. Available in 1/2 kg & 1kg.', rating: 4.6, time: '30 min' },

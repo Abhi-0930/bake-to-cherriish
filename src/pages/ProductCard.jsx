@@ -2,6 +2,12 @@ import React from 'react';
 // import heroImg from '../assets/image.jpg';
 
 // Import classic cake images
+import santaCupcakeImg from '../assets/chirstmas-cakes/santa-cupcakes.jpg';
+import brownieTreeImg from '../assets/chirstmas-cakes/brownie-christmas-trees.jpg';
+import gingerBreadImg from '../assets/chirstmas-cakes/ginger-bread-cookies.jpg';
+import plumCakeImg from '../assets/chirstmas-cakes/plum-cake.jpg';
+import bananaBreadImg from '../assets/chirstmas-cakes/banana-bread.jpg';
+
 import vanillaImg from '../assets/classic-cakes/Vanilla cake.jpg';
 import pineappleImg from '../assets/classic-cakes/Pineapple cake.jpg';
 import strawberryImg from '../assets/classic-cakes/Strawberry cake.jpg';
@@ -56,6 +62,15 @@ import nutellaMuffinImg from '../assets/muffins/Nutella_Muffins_Cinematic.jpg';
 import chocolateMuffinImg from '../assets/muffins/Chocolate_Muffins_Cinematic (1).jpg';
 import strawberryMuffinImg from '../assets/muffins/Strawberry_Muffins_Cinematic .jpg';
 import mixBerryMuffinImg from '../assets/muffins/Mixed_Berry_Muffins_Cinematic.jpg';
+
+// Create image mapping for christmas cakes
+const christmasCakeImages = {
+  'Santa Cupcakes': santaCupcakeImg,
+  'Brownie Christmas Trees': brownieTreeImg,
+  'Ginger Bread Cookies': gingerBreadImg,
+  'Plum Cake': plumCakeImg,
+  'Banana Bread': bananaBreadImg
+};
 
 // Create image mapping for classic cakes
 const classicCakeImages = {
@@ -130,6 +145,7 @@ const ProductCard = ({ item, type, section }) => {
     
     // Get image height based on section
     const getImageHeight = () => {
+      if (section === 'christmas') return '250px';
       if (section === 'classic') return '260px';
       if (section === 'premium') return '240px';
       if (section === 'chef') return '240px';
@@ -139,6 +155,9 @@ const ProductCard = ({ item, type, section }) => {
     // Get the appropriate image for the item
     const getItemImage = () => {
       if (type === 'cake') {
+        if (christmasCakeImages[item.name]) {
+          return christmasCakeImages[item.name];
+        }
         // Check for classic cake images first
         if (classicCakeImages[item.name]) {
           return classicCakeImages[item.name];

@@ -21,7 +21,7 @@ const categoryImages = {
 };
 
 const categories = [
-  { label: 'Christmas Cakes', href: '#menu' },
+  { label: 'Christmas Cakes', href: '#christmas' },
   { label: 'Classic Cakes', href: '#menu' },
   { label: 'Premium Cakes', href: '#premium' },
   { label: "Chef's Specials", href: '#chef-specials' },
