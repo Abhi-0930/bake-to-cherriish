@@ -166,7 +166,7 @@ const App = () => {
         </div>
       )}
 
-      {(!selectedCategory || selectedCategory === 'menu' || selectedCategory === 'christmas') && christmasFiltered.length > 0 && (
+      {(!selectedCategory || selectedCategory === 'christmas') && christmasFiltered.length > 0 && (
         <>
           <MenuSection 
             id="christmas"
