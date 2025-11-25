@@ -66,6 +66,7 @@ const App = () => {
         case 'fruit': return name.includes('strawberry') || name.includes('blueberry') || name.includes('pineapple') || name.includes('berry') || name.includes('fruit') || name.includes('lychee') || name.includes('apricot');
         case 'nut': return name.includes('walnut') || name.includes('pistachio') || name.includes('almond') || name.includes('nut') || name.includes('hazelnut');
         case 'specialty': return name.includes('chef') || name.includes('special') || name.includes('premium') || name.includes('tiramisu') || name.includes('rasmalai') || name.includes('cheesecake');
+        case 'christmas': return name.includes('christmas') || name.includes('santa') || name.includes('ginger') || name.includes('plum') || name.includes('banana');
         case 'brownie': return name.includes('brownie');
         case 'cookie': return name.includes('cookie');
         case 'muffin': return name.includes('muffin') || name.includes('cupcake');
@@ -85,6 +86,7 @@ const App = () => {
         case 'brownies': return name.includes('brownie');
         case 'cookies': return name.includes('cookie');
         case 'muffins': return name.includes('muffin') || name.includes('cupcake');
+        case 'christmas': return name.includes('christmas') || name.includes('santa') || name.includes('ginger') || name.includes('plum') || name.includes('banana');
         default: return true;
       }
     })();
