@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import { menuData } from './constants';
 import { Filter } from 'lucide-react';
 import Header from './pages/Header';
 import Hero from './pages/Hero';
 import CategoryMenu from './pages/CategoryMenu';
 import MenuSection from './pages/MenuSection';
-import IndividualTreatSection from './pages/IndividualTreatSection';
+const IndividualTreatSection = React.lazy(() => import('./pages/IndividualTreatSection'));
+const FilterPanel = React.lazy(() => import('./pages/FilterModal'));
 import NoResults from './pages/NoResults';
-import FilterPanel from './pages/FilterModal';
 import Footer from './pages/Footer';
 import AnimatedSearchInput from './components/AnimatedSearchInput';
 
@@ -158,12 +158,14 @@ const App = () => {
             </div>
             
             {/* Overlay Filter Panel */}
-            <FilterPanel
-              isOpen={isFilterModalOpen}
-              onClose={() => setIsFilterModalOpen(false)}
-              filters={filters}
-              onApplyFilters={setFilters}
-            />
+            <Suspense fallback={null}>
+              <FilterPanel
+                isOpen={isFilterModalOpen}
+                onClose={() => setIsFilterModalOpen(false)}
+                filters={filters}
+                onApplyFilters={setFilters}
+              />
+            </Suspense>
           </div>
         </div>
       )}
@@ -231,21 +233,33 @@ const App = () => {
       )}
 
       {/* Individual Treat Sections */}
-      {(!selectedCategory || selectedCategory === 'brownies') && <IndividualTreatSection treatType="brownies" searchQuery={searchQuery} />}
+      {(!selectedCategory || selectedCategory === 'brownies') && (
+        <Suspense fallback={null}>
+          <IndividualTreatSection treatType="brownies" searchQuery={searchQuery} />
+        </Suspense>
+      )}
       {(!selectedCategory || selectedCategory === 'brownies') && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
         </div>
       )}
 
-      {(!selectedCategory || selectedCategory === 'cookies') && <IndividualTreatSection treatType="cookies" searchQuery={searchQuery} />}
+      {(!selectedCategory || selectedCategory === 'cookies') && (
+        <Suspense fallback={null}>
+          <IndividualTreatSection treatType="cookies" searchQuery={searchQuery} />
+        </Suspense>
+      )}
       {(!selectedCategory || selectedCategory === 'cookies') && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
         </div>
       )}
 
-      {(!selectedCategory || selectedCategory === 'muffins') && <IndividualTreatSection treatType="muffins" searchQuery={searchQuery} />}
+      {(!selectedCategory || selectedCategory === 'muffins') && (
+        <Suspense fallback={null}>
+          <IndividualTreatSection treatType="muffins" searchQuery={searchQuery} />
+        </Suspense>
+      )}
       {(!selectedCategory || selectedCategory === 'muffins') && (
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />

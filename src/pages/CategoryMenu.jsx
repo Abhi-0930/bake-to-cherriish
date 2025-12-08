@@ -67,7 +67,14 @@ const CategoryMenu = ({ selectedCategory, onSelect }) => {
                     border: isSelected ? '3px solid var(--color-accent)' : '3px solid transparent'
                   }}
                 >
-                  <img src={categoryImages[c.label]} alt={c.label} className="w-full h-full object-cover" />
+                  <img
+                    src={categoryImages[c.label]}
+                    alt={c.label}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    width="112"
+                    height="112"
+                  />
                 </div>
                 <div
                   className="mt-3 font-semibold text-sm sm:text-base whitespace-nowrap"

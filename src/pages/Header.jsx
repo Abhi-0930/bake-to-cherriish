@@ -18,6 +18,8 @@ const Header = () => {
                 src="/bakery-logo.jpg" 
                 alt="BAKE TO CHERRIISH" 
                 className="h-12 sm:h-14 w-auto"
+                width="140"
+                height="56"
               />
               <span className="hidden lg:block ml-3 text-xl font-bold" style={{ color: 'var(--color-text)' }}>
                 BAKE TO CHERRIISH

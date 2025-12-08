@@ -186,6 +186,8 @@ const ProductCard = ({ item, type, section }) => {
       // return heroImg; // fallback to hero image
     };
 
+    const imgHeight = parseInt(getImageHeight(), 10) || 240;
+
     return (
       <div
         style={{ backgroundColor: 'var(--color-surface)', borderColor: 'rgba(107,79,57,0.2)' }}
@@ -195,7 +197,14 @@ const ProductCard = ({ item, type, section }) => {
       >
         {/* Image */}
         <div className="relative" style={{ height: getImageHeight(), backgroundColor: 'var(--color-background)' }}>
-          <img src={getItemImage()} alt={item.name} className="w-full h-full object-cover" loading="lazy" />
+          <img
+            src={getItemImage()}
+            alt={item.name}
+            className="w-full h-full object-cover"
+            loading="lazy"
+            width="400"
+            height={imgHeight}
+          />
           
         </div>
 

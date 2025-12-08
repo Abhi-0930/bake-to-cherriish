@@ -11,6 +11,9 @@ const Footer = () => {
                   src="/bakery-logo.jpg" 
                   alt="BAKE TO CHERRIISH" 
                   className="h-25 w-auto"
+                  width="160"
+                  height="80"
+                  loading="lazy"
                 />
               </div>
               <p className="text-base opacity-90 mb-4">Where every bite tells a story</p>
