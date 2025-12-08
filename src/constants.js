@@ -17,9 +17,9 @@ export const menuData = {
   christmasCakes: [
     { name: 'Santa Cupcakes', price: 330, packLabel: 'per 6 pieces', desc: 'Festive vanilla cupcakes topped with Santa hats and cute face.', rating: 4.8, time: '30 min' },
     { name: 'Brownie Christmas Trees', price: 99, packLabel: 'per piece', desc: 'Rich brownies shaped like little trees, finished with silky ganache and sprinkles.', rating: 4.9, time: '35 min' },
-    { name: 'Ginger Bread Cookies', half: 260, full: 260, desc: 'Classic gingerbread cookies with a soft bite and attractive royal icing.', rating: 4.7, time: '30 min' },
-    { name: 'Plum Cake', half: 230, full: 450, desc: 'Slow-baked plum cake made with soaked fruits, nuts, and warm spices with a hint of orange flavour.', rating: 4.9, time: '45 min', badge: 'Alcohol Free' },
-    { name: 'Banana Bread', half: 500, full: 500, desc: 'Moist, sweet bread rich with ripe banana and creamy milk chocolate chunks in every bite.', rating: 4.6, time: '35 min' }
+    { name: 'Ginger Bread Cookies', price: 260, packLabel: 'per 6 pieces', desc: 'Classic gingerbread cookies with a soft bite and attractive royal icing.', rating: 4.7, time: '30 min' },
+    { name: 'Plum Cake', half: 230, full: 450, sizeHalfLabel: '250gm', sizeFullLabel: '500gm', desc: 'Slow-baked plum cake made with soaked fruits, nuts, and warm spices with a hint of orange flavour.', rating: 4.9, time: '45 min', badge: 'Alcohol Free' },
+    { name: 'Banana Bread', price: 500, packLabel: '500gm', desc: 'Moist, sweet bread rich with ripe banana and creamy milk chocolate chunks in every bite.', rating: 4.6, time: '35 min' }
   ],
   classicCakes: [
     { name: 'Vanilla Cake', half: 499, full: 899, desc: 'Soft vanilla sponge with smooth vanilla cream. Light, sweet, and perfect for any occasion. Available in 1/2 kg & 1kg.', rating: 4.5, time: '30 min' },
@@ -57,12 +57,12 @@ export const menuData = {
   ],
   brownies: [
     { name: 'Classic Brownie', price: 99, desc: 'Rich, fudgy chocolate brownie with a perfect chewy texture. A timeless favorite.', rating: 4.6, time: '20 min' },
-    { name: 'Nutella Brownie', price: 129, desc: 'Chocolate brownie swirled with creamy Nutella. Decadent and irresistible.', rating: 4.8, time: '20 min' },
-    { name: 'Walnut Brownie', price: 129, desc: 'Classic brownie loaded with crunchy walnuts. Perfect balance of texture and flavor.', rating: 4.7, time: '20 min' },
-    { name: 'Biscoff Brownie', price: 149, desc: 'Chocolate brownie with Biscoff cookie spread. A European-inspired treat.', rating: 4.8, time: '25 min' },
-    { name: 'Pistachio Brownie', price: 149, desc: 'Rich brownie topped with crushed pistachios. Nutty and luxurious.', rating: 4.7, time: '25 min' },
-    { name: 'Peanut Butter Brownie', price: 149, desc: 'Chocolate brownie swirled with smooth peanut butter. A perfect sweet and salty combo.', rating: 4.8, time: '25 min' },
-    { name: 'Double Chocolate Brownie', price: 149, desc: 'Extra chocolatey brownie with chocolate chips. For the ultimate chocolate lover.', rating: 4.9, time: '25 min' }
+    { name: 'Nutella Brownie', price: 109, desc: 'Chocolate brownie swirled with creamy Nutella. Decadent and irresistible.', rating: 4.8, time: '20 min' },
+    { name: 'Walnut Brownie', price: 109, desc: 'Classic brownie loaded with crunchy walnuts. Perfect balance of texture and flavor.', rating: 4.7, time: '20 min' },
+    { name: 'Biscoff Brownie', price: 109, desc: 'Chocolate brownie with Biscoff cookie spread. A European-inspired treat.', rating: 4.8, time: '25 min' },
+    { name: 'Pistachio Brownie', price: 109, desc: 'Rich brownie topped with crushed pistachios. Nutty and luxurious.', rating: 4.7, time: '25 min' },
+    { name: 'Peanut Butter Brownie', price: 109, desc: 'Chocolate brownie swirled with smooth peanut butter. A perfect sweet and salty combo.', rating: 4.8, time: '25 min' },
+    { name: 'Double Chocolate Brownie', price: 109, desc: 'Extra chocolatey brownie with chocolate chips. For the ultimate chocolate lover.', rating: 4.9, time: '25 min' }
   ],
   cookies: [
     { name: 'Chocochip Cookies', price: 359, desc: 'Soft and chewy cookies loaded with chocolate chips. A classic favorite for all ages.', rating: 4.7, time: '25 min' },
@@ -73,10 +73,10 @@ export const menuData = {
     { name: 'Almond Cookies', price: 359, desc: 'Crunchy cookies made with real almonds. Nutty flavor with a perfect texture.', rating: 4.7, time: '25 min' }
   ],
   muffins: [
-    { name: 'Vanilla', muffin: 309, cupcake: 389, desc: 'Soft vanilla muffin with a light, fluffy texture. Perfect for breakfast or snack.', rating: 4.5, time: '20 min' },
-    { name: 'Nutella', muffin: 309, cupcake: 389, desc: 'Rich chocolate muffin swirled with creamy Nutella. A chocolate lover\'s dream.', rating: 4.7, time: '20 min' },
-    { name: 'Chocolate', muffin: 309, cupcake: 389, desc: 'Moist chocolate muffin with chocolate chips. Rich and satisfying.', rating: 4.8, time: '20 min' },
-    { name: 'Strawberry', muffin: 309, cupcake: 389, desc: 'Sweet strawberry muffin with real fruit pieces. Fresh and fruity.', rating: 4.6, time: '20 min' },
-    { name: 'Mix Berry', muffin: 309, cupcake: 389, desc: 'Mixed berry muffin with blueberries, raspberries, and strawberries. Bursting with flavor.', rating: 4.7, time: '20 min' }
+    { name: 'Vanilla', muffin: 300, cupcake: 349, desc: 'Soft vanilla muffin with a light, fluffy texture. Perfect for breakfast or snack.', rating: 4.5, time: '20 min' },
+    { name: 'Nutella', muffin: 309, cupcake: 359, desc: 'Rich chocolate muffin swirled with creamy Nutella. A chocolate lover\'s dream.', rating: 4.7, time: '20 min' },
+    { name: 'Chocolate', muffin: 309, cupcake: 359, desc: 'Moist chocolate muffin with chocolate chips. Rich and satisfying.', rating: 4.8, time: '20 min' },
+    { name: 'Strawberry', muffin: 309, cupcake: 359, desc: 'Sweet strawberry muffin with real fruit pieces. Fresh and fruity.', rating: 4.6, time: '20 min' },
+    { name: 'Mix Berry', muffin: 309, cupcake: 359, desc: 'Mixed berry muffin with blueberries, raspberries, and strawberries. Bursting with flavor.', rating: 4.7, time: '20 min' }
   ]
 };

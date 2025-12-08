@@ -240,11 +240,15 @@ const ProductCard = ({ item, type, section }) => {
               item.half && item.full ? (
                 <>
                   <div className="flex items-center justify-between">
-                    <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">1/2 kg</span>
+                    <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">
+                      {item.sizeHalfLabel || '1/2 kg'}
+                    </span>
                     <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{item.half}</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">1 kg</span>
+                    <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">
+                      {item.sizeFullLabel || '1 kg'}
+                    </span>
                     <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{item.full}</span>
                   </div>
                 </>
