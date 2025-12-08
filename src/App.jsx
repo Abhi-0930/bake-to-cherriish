@@ -171,8 +171,8 @@ const App = () => {
         </div>
       )}
 
-      <LazySection minHeight={400}>
-        {(!selectedCategory || selectedCategory === 'christmas') && christmasFiltered.length > 0 && (
+      {(!selectedCategory || selectedCategory === 'christmas') && christmasFiltered.length > 0 && (
+        <LazySection minHeight={400}>
           <>
             <MenuSection 
               id="christmas"
@@ -186,11 +186,11 @@ const App = () => {
               <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
             </div>
           </>
-        )}
-      </LazySection>
+        </LazySection>
+      )}
 
-      <LazySection minHeight={400}>
-        {(!selectedCategory || selectedCategory === 'menu') && classicFiltered.length > 0 && (
+      {(!selectedCategory || selectedCategory === 'menu') && classicFiltered.length > 0 && (
+        <LazySection minHeight={400}>
           <MenuSection 
             id="menu"
             title="Classic Cakes" 
@@ -199,16 +199,14 @@ const App = () => {
             type="cake"
             section="classic"
           />
-        )}
-        {(!selectedCategory || selectedCategory === 'menu') && classicFiltered.length > 0 && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        )}
-      </LazySection>
+        </LazySection>
+      )}
 
-      <LazySection minHeight={400}>
-        {(!selectedCategory || selectedCategory === 'premium') && premiumFiltered.length > 0 && (
+      {(!selectedCategory || selectedCategory === 'premium') && premiumFiltered.length > 0 && (
+        <LazySection minHeight={400}>
           <>
             <MenuSection 
               id="premium"
@@ -222,11 +220,11 @@ const App = () => {
               <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
             </div>
           </>
-        )}
-      </LazySection>
+        </LazySection>
+      )}
 
-      <LazySection minHeight={400}>
-        {(!selectedCategory || selectedCategory === 'chef-specials') && chefFiltered.length > 0 && (
+      {(!selectedCategory || selectedCategory === 'chef-specials') && chefFiltered.length > 0 && (
+        <LazySection minHeight={400}>
           <MenuSection 
             id="chef-specials"
             title="Chef's Speciality" 
@@ -235,53 +233,45 @@ const App = () => {
             type="single"
             section="chef"
           />
-        )}
-        {(!selectedCategory || selectedCategory === 'chef-specials') && chefFiltered.length > 0 && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        )}
-      </LazySection>
+        </LazySection>
+      )}
 
       {/* Individual Treat Sections */}
-      <LazySection minHeight={320}>
-        {(!selectedCategory || selectedCategory === 'brownies') && (
+      {(!selectedCategory || selectedCategory === 'brownies') && (
+        <LazySection minHeight={320}>
           <Suspense fallback={null}>
             <IndividualTreatSection treatType="brownies" searchQuery={searchQuery} />
           </Suspense>
-        )}
-        {(!selectedCategory || selectedCategory === 'brownies') && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        )}
-      </LazySection>
+        </LazySection>
+      )}
 
-      <LazySection minHeight={320}>
-        {(!selectedCategory || selectedCategory === 'cookies') && (
+      {(!selectedCategory || selectedCategory === 'cookies') && (
+        <LazySection minHeight={320}>
           <Suspense fallback={null}>
             <IndividualTreatSection treatType="cookies" searchQuery={searchQuery} />
           </Suspense>
-        )}
-        {(!selectedCategory || selectedCategory === 'cookies') && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        )}
-      </LazySection>
+        </LazySection>
+      )}
 
-      <LazySection minHeight={320}>
-        {(!selectedCategory || selectedCategory === 'muffins') && (
+      {(!selectedCategory || selectedCategory === 'muffins') && (
+        <LazySection minHeight={320}>
           <Suspense fallback={null}>
             <IndividualTreatSection treatType="muffins" searchQuery={searchQuery} />
           </Suspense>
-        )}
-        {(!selectedCategory || selectedCategory === 'muffins') && (
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        )}
-      </LazySection>
+        </LazySection>
+      )}
 
 
       {/* Show No Results when search returns nothing */}
