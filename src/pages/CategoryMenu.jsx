@@ -2,13 +2,13 @@ import React from 'react';
 // import img from '../assets/image.jpg';
 
 // Import menu item images
-import christmasCakeImg from '../assets/chirstmas-cakes/santa-cupcakes.jpg';
-import classicCakeImg from '../assets/menu-items/classic-cake.jpg';
-import premiumCakeImg from '../assets/menu-items/premium-cake.jpg';
-import chefSpecialityImg from '../assets/menu-items/chef-speciality.jpg';
-import brownieImg from '../assets/menu-items/brownie.jpg';
-import cookieImg from '../assets/menu-items/cookie.jpg';
-import muffinsImg from '../assets/menu-items/muffins.jpg';
+import christmasCakeImg from '../assets/chirstmas-cakes/santa-cupcakes.webp';
+import classicCakeImg from '../assets/menu-items/classic-cake.webp';
+import premiumCakeImg from '../assets/menu-items/premium-cake.webp';
+import chefSpecialityImg from '../assets/menu-items/chef-speciality.webp';
+import brownieImg from '../assets/menu-items/brownie.webp';
+import cookieImg from '../assets/menu-items/cookie.webp';
+import muffinsImg from '../assets/menu-items/muffins.webp';
 // Create image mapping for menu categories
 const categoryImages = {
   'Christmas Menu': christmasCakeImg,

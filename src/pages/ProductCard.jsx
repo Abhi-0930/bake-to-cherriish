@@ -2,66 +2,66 @@ import React from 'react';
 // import heroImg from '../assets/image.jpg';
 
 // Import classic cake images
-import santaCupcakeImg from '../assets/chirstmas-cakes/santa-cupcakes.jpg';
-import brownieTreeImg from '../assets/chirstmas-cakes/brownie-christmas-trees.jpg';
-import gingerBreadImg from '../assets/chirstmas-cakes/ginger-bread-cookies.jpg';
-import plumCakeImg from '../assets/chirstmas-cakes/plum-cake.jpg';
-import bananaBreadImg from '../assets/chirstmas-cakes/banana-bread.jpg';
+import santaCupcakeImg from '../assets/chirstmas-cakes/santa-cupcakes.webp';
+import brownieTreeImg from '../assets/chirstmas-cakes/brownie-christmas-trees.webp';
+import gingerBreadImg from '../assets/chirstmas-cakes/ginger-bread-cookies.webp';
+import plumCakeImg from '../assets/chirstmas-cakes/plum-cake.webp';
+import bananaBreadImg from '../assets/chirstmas-cakes/banana-bread.webp';
 
-import vanillaImg from '../assets/classic-cakes/Vanilla cake.jpg';
-import pineappleImg from '../assets/classic-cakes/Pineapple cake.jpg';
-import strawberryImg from '../assets/classic-cakes/Strawberry cake.jpg';
-import blueberryImg from '../assets/classic-cakes/Blueberry cake.jpg';
-import raspberryImg from '../assets/classic-cakes/Rasberry cake.jpg';
-import butterscotchImg from '../assets/classic-cakes/Butterscotch cake.jpg';
-import chocolateImg from '../assets/classic-cakes/Chocolate cake.jpg';
-import whiteForestImg from '../assets/classic-cakes/White forest cake.jpg';
-import blackForestImg from '../assets/classic-cakes/Black forest cake.jpg';
+import vanillaImg from '../assets/classic-cakes/Vanilla cake.webp';
+import pineappleImg from '../assets/classic-cakes/Pineapple cake.webp';
+import strawberryImg from '../assets/classic-cakes/Strawberry cake.webp';
+import blueberryImg from '../assets/classic-cakes/Blueberry cake.webp';
+import raspberryImg from '../assets/classic-cakes/Rasberry cake.webp';
+import butterscotchImg from '../assets/classic-cakes/Butterscotch cake.webp';
+import chocolateImg from '../assets/classic-cakes/Chocolate cake.webp';
+import whiteForestImg from '../assets/classic-cakes/White forest cake.webp';
+import blackForestImg from '../assets/classic-cakes/Black forest cake.webp';
 
 // Import premium cake images
-import lycheeImg from '../assets/premium-cakes/Lyche cake.jpg';
-import tresLechesImg from '../assets/premium-cakes/Rich tres leches cake.jpg';
-import caramelDelightImg from '../assets/premium-cakes/Caramel delight cake.jpg';
-import freshFruitImg from '../assets/premium-cakes/Fresh fruit cake.jpg';
-import veryBerryImg from '../assets/premium-cakes/Very berry infused cake.jpg';
-import belgiumChocolateImg from '../assets/premium-cakes/BCC.jpg';
-import redVelvetImg from '../assets/premium-cakes/Red velvet cake.jpg';
+import lycheeImg from '../assets/premium-cakes/Lyche cake.webp';
+import tresLechesImg from '../assets/premium-cakes/Rich tres leches cake.webp';
+import caramelDelightImg from '../assets/premium-cakes/Caramel delight cake.webp';
+import freshFruitImg from '../assets/premium-cakes/Fresh fruit cake.webp';
+import veryBerryImg from '../assets/premium-cakes/Very berry infused cake.webp';
+import belgiumChocolateImg from '../assets/premium-cakes/BCC.webp';
+import redVelvetImg from '../assets/premium-cakes/Red velvet cake.webp';
 
 // Import chef specialty images
-import mochaFudgeImg from '../assets/chef-speciality/Mocha fudge fantasy.jpg';
-import chocoBerryImg from '../assets/chef-speciality/Choco berry burst.jpg';
-import tiramisuImg from '../assets/chef-speciality/Dreamy tiramasu.jpg';
-import rasmalaiImg from '../assets/chef-speciality/Rasmalai magic.jpg';
-import bananaBlissImg from '../assets/chef-speciality/Banana bliss.jpg';
-import carrotIndulgenceImg from '../assets/chef-speciality/Creamy carrot indulgence.jpg';
-import honeyCharmImg from '../assets/chef-speciality/Golden honey charm.jpg';
-import apricotPassionImg from '../assets/chef-speciality/Apricot passion.jpg';
-import cheesecakeImg from '../assets/chef-speciality/Sugar cloud cheesecake.jpg';
-import guiltFreeImg from '../assets/chef-speciality/Guiltfree goodness.jpg';
+import mochaFudgeImg from '../assets/chef-speciality/Mocha fudge fantasy.webp';
+import chocoBerryImg from '../assets/chef-speciality/Choco berry burst.webp';
+import tiramisuImg from '../assets/chef-speciality/Dreamy tiramasu.webp';
+import rasmalaiImg from '../assets/chef-speciality/Rasmalai magic.webp';
+import bananaBlissImg from '../assets/chef-speciality/Banana bliss.webp';
+import carrotIndulgenceImg from '../assets/chef-speciality/Creamy carrot indulgence.webp';
+import honeyCharmImg from '../assets/chef-speciality/Golden honey charm.webp';
+import apricotPassionImg from '../assets/chef-speciality/Apricot passion.webp';
+import cheesecakeImg from '../assets/chef-speciality/Sugar cloud cheesecake.webp';
+import guiltFreeImg from '../assets/chef-speciality/Guiltfree goodness.webp';
 
 // Import brownie images
-import classicBrownieImg from '../assets/brownies/Classic Brownie 2.jpg';
-import nutellaBrownieImg from '../assets/brownies/Nutella_Brownie_Cinematic.jpg';
-import walnutBrownieImg from '../assets/brownies/Walnut_Brownie.jpg';
-import biscoffBrownieImg from '../assets/brownies/Biscoff_Brownie_Cinematic.jpg';
-import pistachioBrownieImg from '../assets/brownies/Pistachio_Brownie_Cinematic.jpg';
-import peanutButterBrownieImg from '../assets/brownies/Peanut_Butter_Brownie_Cinematic.jpg';
-import doubleChocolateBrownieImg from '../assets/brownies/Double_Chocolate_Brownie_Cinematic.jpg';
+import classicBrownieImg from '../assets/brownies/Classic Brownie 2.webp';
+import nutellaBrownieImg from '../assets/brownies/Nutella_Brownie_Cinematic.webp';
+import walnutBrownieImg from '../assets/brownies/Walnut_Brownie.webp';
+import biscoffBrownieImg from '../assets/brownies/Biscoff_Brownie_Cinematic.webp';
+import pistachioBrownieImg from '../assets/brownies/Pistachio_Brownie_Cinematic.webp';
+import peanutButterBrownieImg from '../assets/brownies/Peanut_Butter_Brownie_Cinematic.webp';
+import doubleChocolateBrownieImg from '../assets/brownies/Double_Chocolate_Brownie_Cinematic.webp';
 
 // Import cookie images
-import chocochipCookieImg from '../assets/cookies/Chocolate_Chip_Cookies_Cinematic.jpg';
-import hazelnutFudgeCookieImg from '../assets/cookies/Hazelnut_Fudge_Cookies_Transparent_Cinematic.jpg';
-import peanutButterCookieImg from '../assets/cookies/Peanut_Butter_Cookies_Cinematic.jpg';
-import milkChocolateCookieImg from '../assets/cookies/Milk_Chocolate_Cookies_Cinematic (3).jpg';
-import saltedButterCookieImg from '../assets/cookies/Salted_Butter_Cookies_Cinematic.jpg';
-import almondCookieImg from '../assets/cookies/Almond_Cookies_Cinematic.jpg';
+import chocochipCookieImg from '../assets/cookies/Chocolate_Chip_Cookies_Cinematic.webp';
+import hazelnutFudgeCookieImg from '../assets/cookies/Hazelnut_Fudge_Cookies_Transparent_Cinematic.webp';
+import peanutButterCookieImg from '../assets/cookies/Peanut_Butter_Cookies_Cinematic.webp';
+import milkChocolateCookieImg from '../assets/cookies/Milk_Chocolate_Cookies_Cinematic.webp';
+import saltedButterCookieImg from '../assets/cookies/Salted_Butter_Cookies_Cinematic.webp';
+import almondCookieImg from '../assets/cookies/Almond_Cookies_Cinematic.webp';
 
 // Import muffin images
-import vanillaMuffinImg from '../assets/muffins/Vanilla_Muffins_Cinematic.jpg';
-import nutellaMuffinImg from '../assets/muffins/Nutella_Muffins_Cinematic.jpg';
-import chocolateMuffinImg from '../assets/muffins/Chocolate_Muffins_Cinematic (1).jpg';
-import strawberryMuffinImg from '../assets/muffins/Strawberry_Muffins_Cinematic .jpg';
-import mixBerryMuffinImg from '../assets/muffins/Mixed_Berry_Muffins_Cinematic.jpg';
+import vanillaMuffinImg from '../assets/muffins/Vanilla_Muffins_Cinematic.webp';
+import nutellaMuffinImg from '../assets/muffins/Nutella_Muffins_Cinematic.webp';
+import chocolateMuffinImg from '../assets/muffins/Chocolate_Muffins_Cinematic.webp';
+import strawberryMuffinImg from '../assets/muffins/Strawberry_Muffins_Cinematic.webp';
+import mixBerryMuffinImg from '../assets/muffins/Mixed_Berry_Muffins_Cinematic.webp';
 
 // Create image mapping for christmas cakes
 const christmasCakeImages = {
@@ -195,7 +195,7 @@ const ProductCard = ({ item, type, section }) => {
       >
         {/* Image */}
         <div className="relative" style={{ height: getImageHeight(), backgroundColor: 'var(--color-background)' }}>
-          <img src={getItemImage()} alt={item.name} className="w-full h-full object-cover" />
+          <img src={getItemImage()} alt={item.name} className="w-full h-full object-cover" loading="lazy" />
           
         </div>
 
