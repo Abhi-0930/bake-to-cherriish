@@ -205,6 +205,18 @@ const ProductCard = ({ item, type, section }) => {
             <h4 style={{ color: 'var(--color-text)' }} className="font-bold text-base leading-tight mr-2">
               {item.name}
             </h4>
+            {item.badge && (
+              <span
+                className="text-[11px] px-2 py-1 rounded-full font-semibold"
+                style={{
+                  backgroundColor: 'var(--color-primary)',
+                  color: 'var(--color-surface)',
+                  border: '1px solid rgba(107,79,57,0.15)'
+                }}
+              >
+                {item.badge}
+              </span>
+            )}
           </div>
 
           {item.desc && (

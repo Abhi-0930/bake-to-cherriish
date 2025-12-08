@@ -18,7 +18,7 @@ export const menuData = {
     { name: 'Santa Cupcakes', half: 330, full: 330, desc: 'Festive vanilla cupcakes topped with Santa hats and cute face.', rating: 4.8, time: '30 min' },
     { name: 'Brownie Christmas Trees', half: 90, full: 90, desc: 'Rich brownies shaped like little trees, finished with silky ganache and sprinkles.', rating: 4.9, time: '35 min' },
     { name: 'Ginger Bread Cookies', half: 260, full: 260, desc: 'Classic gingerbread cookies with a soft bite and attractive royal icing.', rating: 4.7, time: '30 min' },
-    { name: 'Plum Cake', half: 230, full: 450, desc: 'Slow-baked plum cake made with soaked fruits, nuts, and warm spices with a hint of orange flavour.', rating: 4.9, time: '45 min' },
+    { name: 'Plum Cake', half: 230, full: 450, desc: 'Slow-baked plum cake made with soaked fruits, nuts, and warm spices with a hint of orange flavour.', rating: 4.9, time: '45 min', badge: 'Alcohol Free' },
     { name: 'Banana Bread', half: 500, full: 500, desc: 'Moist, sweet bread rich with ripe banana and creamy milk chocolate chunks in every bite.', rating: 4.6, time: '35 min' }
   ],
   classicCakes: [
