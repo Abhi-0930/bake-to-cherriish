@@ -11,7 +11,7 @@ import cookieImg from '../assets/menu-items/cookie.jpg';
 import muffinsImg from '../assets/menu-items/muffins.jpg';
 // Create image mapping for menu categories
 const categoryImages = {
-  'Christmas Cakes': christmasCakeImg,
+  'Christmas Menu': christmasCakeImg,
   'Classic Cakes': classicCakeImg,
   'Premium Cakes': premiumCakeImg,
   "Chef's Specials": chefSpecialityImg,
@@ -21,7 +21,7 @@ const categoryImages = {
 };
 
 const categories = [
-  { label: 'Christmas Cakes', href: '#christmas' },
+  { label: 'Christmas Menu', href: '#christmas' },
   { label: 'Classic Cakes', href: '#menu' },
   { label: 'Premium Cakes', href: '#premium' },
   { label: "Chef's Specials", href: '#chef-specials' },
