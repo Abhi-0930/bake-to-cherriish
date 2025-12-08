@@ -73,31 +73,6 @@ const Hero = () => {
 
                 {/* Call to actions */}
                 <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <button 
-                    onClick={() => {
-                      const menuSection = document.getElementById('menu');
-                      if (menuSection) {
-                        menuSection.scrollIntoView({ behavior: 'smooth' });
-                      }
-                    }}
-                    className="px-6 py-3 rounded-full font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-                    style={{ 
-                      backgroundColor: 'var(--color-surface)', 
-                      color: 'var(--color-accent)',
-                      border: '2px solid var(--color-surface)'
-                    }}
-                    onMouseEnter={(e) => {
-                      e.target.style.backgroundColor = 'transparent';
-                      e.target.style.color = 'var(--color-surface)';
-                    }}
-                    onMouseLeave={(e) => {
-                      e.target.style.backgroundColor = 'var(--color-surface)';
-                      e.target.style.color = 'var(--color-accent)';
-                    }}
-                  >
-                    Start Your Order →
-                  </button>
-
                   <a
                     href="https://wa.me/918019574555"
                     target="_blank"
