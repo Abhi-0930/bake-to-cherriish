@@ -237,16 +237,25 @@ const ProductCard = ({ item, type, section }) => {
           {/* Price Display */}
           <div className="space-y-1">
             {type === 'cake' ? (
-              <>
+              item.half && item.full ? (
+                <>
+                  <div className="flex items-center justify-between">
+                    <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">1/2 kg</span>
+                    <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{item.half}</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">1 kg</span>
+                    <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{item.full}</span>
+                  </div>
+                </>
+              ) : (
                 <div className="flex items-center justify-between">
-                  <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">1/2 kg</span>
-                  <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{item.half}</span>
+                  <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">
+                    {item.packLabel || 'Price'}
+                  </span>
+                  <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{item.price}</span>
                 </div>
-                <div className="flex items-center justify-between">
-                  <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">1 kg</span>
-                  <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{item.full}</span>
-                </div>
-              </>
+              )
             ) : type === 'muffin' ? (
               <>
                 <div className="flex items-center justify-between">
