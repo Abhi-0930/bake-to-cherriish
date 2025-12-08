@@ -19,7 +19,7 @@ export const menuData = {
     { name: 'Brownie Christmas Trees', price: 99, packLabel: 'per piece', desc: 'Rich brownies shaped like little trees, finished with silky ganache and sprinkles.', rating: 4.9, time: '35 min' },
     { name: 'Ginger Bread Cookies', price: 260, packLabel: 'per 6 pieces', desc: 'Classic gingerbread cookies with a soft bite and attractive royal icing.', rating: 4.7, time: '30 min' },
     { name: 'Plum Cake', half: 230, full: 450, sizeHalfLabel: '250gm', sizeFullLabel: '500gm', desc: 'Slow-baked plum cake made with soaked fruits, nuts, and warm spices with a hint of orange flavour.', rating: 4.9, time: '45 min', badge: 'Alcohol Free' },
-    { name: 'Banana Bread', price: 500, packLabel: '500gm', desc: 'Moist, sweet bread rich with ripe banana and creamy milk chocolate chunks in every bite.', rating: 4.6, time: '35 min' }
+    { name: 'Banana Bread', price: 450, packLabel: '500gm', desc: 'Moist, sweet bread rich with ripe banana and creamy milk chocolate chunks in every bite.', rating: 4.6, time: '35 min' }
   ],
   classicCakes: [
     { name: 'Vanilla Cake', half: 499, full: 899, desc: 'Soft vanilla sponge with smooth vanilla cream. Light, sweet, and perfect for any occasion. Available in 1/2 kg & 1kg.', rating: 4.5, time: '30 min' },
@@ -44,15 +44,15 @@ export const menuData = {
 
   ],
   chefSpeciality: [
-    { name: 'Mocha Fudge Fantasy', price: 1599, desc: 'Rich coffee-infused cake with chocolate fudge layers. A perfect blend of coffee and chocolate. Available in 1kg.', rating: 4.9, time: '50 min', badge: 'Chef Special' },
-    { name: 'Choco Berry Burst', price: 1599, desc: 'Chocolate sponge with mixed berry compote and chocolate ganache. A fruity chocolate delight. Available in 1kg.', rating: 4.8, time: '50 min', badge: 'Chef Special' },
-    { name: 'Dreamy Tiramisu', price: 1599, desc: 'Classic Italian dessert with coffee-soaked layers and mascarpone cream. Elegant and sophisticated. Available in 1kg.', rating: 4.9, time: '45 min', badge: 'Chef Special' },
-    { name: 'Rasmalai Magic', price: 1599, desc: 'Soft cottage cheese dumplings in sweetened milk. A traditional Indian dessert reimagined. Available in 1kg.', rating: 4.9, time: '50 min', badge: 'Chef Special' },
-    { name: 'Banana Bliss', price: 1599, desc: 'Moist banana cake with cream cheese frosting and caramel drizzle. Sweet and comforting. Available in 1kg.', rating: 4.7, time: '45 min', badge: 'Chef Special' },
-    { name: 'Creamy Carrot Indulgence', price: 1599, desc: 'Spiced carrot cake with cream cheese frosting and walnut pieces. Warm and wholesome. Available in 1kg.', rating: 4.8, time: '50 min', badge: 'Chef Special' },
-    { name: 'Golden Honey Charm', price: 1599, desc: 'Honey-infused sponge with vanilla cream and honey drizzle. Sweet and golden perfection. Available in 1kg.', rating: 4.8, time: '45 min', badge: 'Chef Special' },
-    { name: 'Apricot Passion', price: 1599, desc: 'Vanilla sponge with apricot compote and whipped cream. A fruity and refreshing treat. Available in 1kg.', rating: 4.7, time: '45 min', badge: 'Chef Special' },
-    { name: 'Sugar Cloud Cheesecake', price: 1649, desc: 'Creamy cheesecake with a buttery biscuit base. Light, fluffy, and absolutely divine. Available in 1kg.', rating: 4.9, time: '50 min', badge: 'Chef Special' },
+    { name: 'Mocha Fudge Fantasy', price: 1599, desc: 'Rich coffee-infused cake with chocolate fudge layers. A perfect blend of coffee and chocolate. Available in 1kg.', rating: 4.9, time: '50 min' },
+    { name: 'Choco Berry Burst', price: 1599, desc: 'Chocolate sponge with mixed berry compote and chocolate ganache. A fruity chocolate delight. Available in 1kg.', rating: 4.8, time: '50 min' },
+    { name: 'Dreamy Tiramisu', price: 1599, desc: 'Classic Italian dessert with coffee-soaked layers and mascarpone cream. Elegant and sophisticated. Available in 1kg.', rating: 4.9, time: '45 min' },
+    { name: 'Rasmalai Magic', price: 1599, desc: 'Soft cottage cheese dumplings in sweetened milk. A traditional Indian dessert reimagined. Available in 1kg.', rating: 4.9, time: '50 min' },
+    { name: 'Banana Bliss', price: 1599, desc: 'Moist banana cake with cream cheese frosting and caramel drizzle. Sweet and comforting. Available in 1kg.', rating: 4.7, time: '45 min' },
+    { name: 'Creamy Carrot Indulgence', price: 1599, desc: 'Spiced carrot cake with cream cheese frosting and walnut pieces. Warm and wholesome. Available in 1kg.', rating: 4.8, time: '50 min' },
+    { name: 'Golden Honey Charm', price: 1599, desc: 'Honey-infused sponge with vanilla cream and honey drizzle. Sweet and golden perfection. Available in 1kg.', rating: 4.8, time: '45 min' },
+    { name: 'Apricot Passion', price: 1599, desc: 'Vanilla sponge with apricot compote and whipped cream. A fruity and refreshing treat. Available in 1kg.', rating: 4.7, time: '45 min' },
+    { name: 'Sugar Cloud Cheesecake', price: 1649, desc: 'Creamy cheesecake with a buttery biscuit base. Light, fluffy, and absolutely divine. Available in 1kg.', rating: 4.9, time: '50 min' },
     { name: 'Guilt-Free Goodness', price: 1699, desc: 'Healthy cake made with natural ingredients and no refined sugar. Delicious and nutritious. Available in 1kg.', rating: 4.8, time: '50 min', badge: 'Healthy' }
   ],
   brownies: [
