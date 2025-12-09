@@ -33,13 +33,13 @@ export const menuData = {
     { name: 'Black Forest Cake', half: 649, full: 1049, desc: 'Chocolate sponge with whipped cream and cherries. A delicious blend of rich and fruity flavors. Available in 1/2 kg & 1kg.', rating: 4.9, time: '35 min' }
   ],
   premiumCakes: [
-    { name: 'Lychee Cake', half: 699, full: 1199, desc: 'Delicate vanilla sponge layered with lychee-flavored cream and real lychee pieces. Available in 1/2 kg & 1kg.', rating: 4.8, time: '40 min', badge: 'Bestseller' },
-    { name: 'Rich Tres Leches Cake', half: 749, full: 1249, desc: 'Sponge cake soaked in three milks. Topped with whipped cream for a melt-in-the-mouth texture. Available in 1/2 kg & 1kg.', rating: 4.9, time: '40 min', badge: 'Bestseller' },
+    { name: 'Lychee Cake', half: 699, full: 1199, desc: 'Delicate vanilla sponge layered with lychee-flavored cream and real lychee pieces. Available in 1/2 kg & 1kg.', rating: 4.8, time: '40 min' },
+    { name: 'Rich Tres Leches Cake', half: 749, full: 1249, desc: 'Sponge cake soaked in three milks. Topped with whipped cream for a melt-in-the-mouth texture. Available in 1/2 kg & 1kg.', rating: 4.9, time: '40 min' },
     { name: 'Caramel Delight Cake', half: 749, full: 1249, desc: 'Soft sponge infused with caramel sauce and layered with caramel cream. Available in 1/2 kg & 1kg.', rating: 4.7, time: '40 min' },
     { name: 'Fresh Fruit Cake', half: 749, full: 1249, desc: 'Light vanilla sponge topped with whipped cream and seasonal fresh fruits. Available in 1/2 kg & 1kg.', rating: 4.6, time: '35 min' },
     { name: 'Very Berry Infused Cake', half: 749, full: 1249, desc: 'Moist vanilla sponge filled with mixed berry compote and whipped cream. Available in 1/2 kg & 1kg.', rating: 4.8, time: '40 min' },
-    { name: 'Belgian Chocolate Cake', half: 799, full: 1299, desc: 'Made with premium Belgian cocoa and layered with silky chocolate ganache. Available in 1/2 kg & 1kg.', rating: 4.9, time: '45 min', badge: 'Bestseller' },
-    { name: 'Redvelvet Creamcheese Cake', half: 799, full: 1299, desc: 'Moist red velvet layers with cream cheese frosting. Rich, tangy, and indulgent. Available in 1/2 kg & 1kg.', rating: 4.9, time: '45 min', badge: 'Bestseller' }
+    { name: 'Belgian Chocolate Cake', half: 799, full: 1299, desc: 'Made with premium Belgian cocoa and layered with silky chocolate ganache. Available in 1/2 kg & 1kg.', rating: 4.9, time: '45 min' },
+    { name: 'Redvelvet Creamcheese Cake', half: 799, full: 1299, desc: 'Moist red velvet layers with cream cheese frosting. Rich, tangy, and indulgent. Available in 1/2 kg & 1kg.', rating: 4.9, time: '45 min' }
     
 
   ],
