@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 // Lazy render children when the wrapper nears the viewport.
-const LazySection = ({ children, rootMargin = '200px', minHeight = 0 }) => {
+const LazySection = ({ children, rootMargin = '200px', minHeight = 0, fallback = null }) => {
   const ref = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -27,7 +27,7 @@ const LazySection = ({ children, rootMargin = '200px', minHeight = 0 }) => {
 
   return (
     <div ref={ref} style={minHeight ? { minHeight } : undefined}>
-      {isVisible ? children : null}
+      {isVisible ? children : fallback}
     </div>
   );
 };

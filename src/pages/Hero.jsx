@@ -60,10 +60,10 @@ const Hero = () => {
                     'Delivery charges applicable'
                   ].map((item) => (
                     <div className="flex items-center gap-3" key={item}>
-                      <div 
+                    <div 
                         className="w-2 h-2 rounded-full flex-shrink-0"
-                        style={{ backgroundColor: 'var(--color-accent)' }}
-                      ></div>
+                      style={{ backgroundColor: 'var(--color-accent)' }}
+                    ></div>
                       <p className="text-base font-medium" style={{ color: 'var(--color-surface)' }}>
                         {item}
                       </p>

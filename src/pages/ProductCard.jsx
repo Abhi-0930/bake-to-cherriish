@@ -238,13 +238,13 @@ const ProductCard = ({ item, type, section }) => {
           <div className="space-y-1">
             {type === 'cake' ? (
               item.half && item.full ? (
-                <>
-                  <div className="flex items-center justify-between">
+              <>
+                <div className="flex items-center justify-between">
                     <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">
                       {item.sizeHalfLabel || '1/2 kg'}
                     </span>
-                    <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{item.half}</span>
-                  </div>
+                  <span style={{ color: 'var(--color-accent)' }} className="text-base font-bold">₹{item.half}</span>
+                </div>
                   <div className="flex items-center justify-between">
                     <span style={{ color: 'var(--color-text-secondary)' }} className="text-sm">
                       {item.sizeFullLabel || '1 kg'}
