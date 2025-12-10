@@ -66,7 +66,7 @@ export const menuData = {
   ],
   cookies: [
     { name: 'Chocochip Cookies', price: 359, desc: 'Soft and chewy cookies loaded with chocolate chips. A classic favorite for all ages.', rating: 4.7, time: '25 min' },
-    { name: 'Hazelnut Fudge Cookies', price: 359, desc: 'Rich chocolate cookies with hazelnut fudge filling. Nutty and indulgent.', rating: 4.8, time: '25 min' },
+    { name: 'Hazelnut Fudge Cookies', price: 379, desc: 'Rich chocolate cookies with hazelnut fudge filling. Nutty and indulgent.', rating: 4.8, time: '25 min' },
     { name: 'Peanut Butter Cookies', price: 359, desc: 'Soft peanut butter cookies with a perfect crumbly texture. Sweet and nutty.', rating: 4.6, time: '25 min' },
     { name: 'Milk Chocolate Cookies', price: 359, desc: 'Buttery cookies with chunks of milk chocolate. Rich and satisfying.', rating: 4.7, time: '25 min' },
     { name: 'Salted Butter Cookies', price: 359, desc: 'Classic butter cookies with a hint of salt. Simple, elegant, and delicious.', rating: 4.6, time: '25 min' },

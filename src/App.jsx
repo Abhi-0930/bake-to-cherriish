@@ -253,7 +253,7 @@ const App = () => {
       )}
 
       {/* Individual Treat Sections */}
-      {(!selectedCategory || selectedCategory === 'brownies') && (
+      {(!selectedCategory || selectedCategory === 'brownies') && browniesFiltered.length > 0 && (
         <LazySection
           minHeight={320}
           fallback={<SectionSkeleton cards={browniesFiltered.length || 4} imageHeight={220} />}
@@ -267,7 +267,7 @@ const App = () => {
         </LazySection>
       )}
 
-      {(!selectedCategory || selectedCategory === 'cookies') && (
+      {(!selectedCategory || selectedCategory === 'cookies') && cookiesFiltered.length > 0 && (
         <LazySection
           minHeight={320}
           fallback={<SectionSkeleton cards={cookiesFiltered.length || 4} imageHeight={220} />}
@@ -281,7 +281,7 @@ const App = () => {
         </LazySection>
       )}
 
-      {(!selectedCategory || selectedCategory === 'muffins') && (
+      {(!selectedCategory || selectedCategory === 'muffins') && muffinsFiltered.length > 0 && (
         <LazySection
           minHeight={320}
           fallback={<SectionSkeleton cards={muffinsFiltered.length || 4} imageHeight={220} />}
