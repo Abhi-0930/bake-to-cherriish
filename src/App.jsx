@@ -68,7 +68,6 @@ const App = () => {
         case 'fruit': return name.includes('strawberry') || name.includes('blueberry') || name.includes('pineapple') || name.includes('berry') || name.includes('fruit') || name.includes('lychee') || name.includes('apricot');
         case 'nut': return name.includes('walnut') || name.includes('pistachio') || name.includes('almond') || name.includes('nut') || name.includes('hazelnut');
         case 'specialty': return name.includes('chef') || name.includes('special') || name.includes('premium') || name.includes('tiramisu') || name.includes('rasmalai') || name.includes('cheesecake');
-        case 'christmas': return name.includes('christmas') || name.includes('santa') || name.includes('ginger') || name.includes('plum') || name.includes('banana');
         case 'brownie': return name.includes('brownie');
         case 'cookie': return name.includes('cookie');
         case 'muffin': return name.includes('muffin') || name.includes('cupcake');
@@ -88,7 +87,6 @@ const App = () => {
         case 'brownies': return name.includes('brownie');
         case 'cookies': return name.includes('cookie');
         case 'muffins': return name.includes('muffin') || name.includes('cupcake');
-        case 'christmas': return name.includes('christmas') || name.includes('santa') || name.includes('ginger') || name.includes('plum') || name.includes('banana');
         default: return true;
       }
     })();
@@ -96,7 +94,6 @@ const App = () => {
     return searchMatch && priceMatch && varietyMatch && itemTypeMatch;
   };
 
-  const christmasFiltered = menuData.christmasCakes.filter(matches);
   const classicFiltered = menuData.classicCakes.filter(matches);
   const premiumFiltered = menuData.premiumCakes.filter(matches);
   const chefFiltered = menuData.chefSpeciality.filter(matches);
@@ -107,7 +104,7 @@ const App = () => {
   const muffinsFiltered = menuData.muffins.filter(matches);
 
   // Check if there are any results at all
-  const hasAnyResults = christmasFiltered.length > 0 || classicFiltered.length > 0 || premiumFiltered.length > 0 || chefFiltered.length > 0 || browniesFiltered.length > 0 || cookiesFiltered.length > 0 || muffinsFiltered.length > 0;
+  const hasAnyResults = classicFiltered.length > 0 || premiumFiltered.length > 0 || chefFiltered.length > 0 || browniesFiltered.length > 0 || cookiesFiltered.length > 0 || muffinsFiltered.length > 0;
   
   // Check if filters are applied (not default values)
   const hasActiveFilters = filters.priceRange !== 'all' || filters.variety !== 'all' || filters.itemType !== 'all';
@@ -170,27 +167,6 @@ const App = () => {
             </Suspense>
           </div>
         </div>
-      )}
-
-      {(!selectedCategory || selectedCategory === 'christmas') && christmasFiltered.length > 0 && (
-        <LazySection
-          minHeight={400}
-          fallback={<SectionSkeleton cards={christmasFiltered.length || 4} imageHeight={250} />}
-        >
-          <>
-            <MenuSection 
-              id="christmas"
-              title="Christmas Cakes"
-              subtitle="Limited-time festive bakes fresh from Santa's kitchen"
-              items={christmasFiltered}
-              type="cake"
-              section="christmas"
-            />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
-            </div>
-          </>
-        </LazySection>
       )}
 
       {(!selectedCategory || selectedCategory === 'menu') && classicFiltered.length > 0 && (

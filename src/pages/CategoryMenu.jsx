@@ -2,7 +2,6 @@ import React from 'react';
 // import img from '../assets/image.jpg';
 
 // Import menu item images
-import christmasCakeImg from '../assets/chirstmas-cakes/santa-cupcakes.webp';
 import classicCakeImg from '../assets/menu-items/classic-cake.webp';
 import premiumCakeImg from '../assets/menu-items/premium-cake.webp';
 import chefSpecialityImg from '../assets/menu-items/chef-speciality.webp';
@@ -11,7 +10,6 @@ import cookieImg from '../assets/menu-items/cookie.webp';
 import muffinsImg from '../assets/menu-items/muffins.webp';
 // Create image mapping for menu categories
 const categoryImages = {
-  'Christmas Menu': christmasCakeImg,
   'Classic Cakes': classicCakeImg,
   'Premium Cakes': premiumCakeImg,
   "Chef's Specials": chefSpecialityImg,
@@ -21,7 +19,6 @@ const categoryImages = {
 };
 
 const categories = [
-  { label: 'Christmas Menu', href: '#christmas' },
   { label: 'Classic Cakes', href: '#menu' },
   { label: 'Premium Cakes', href: '#premium' },
   { label: "Chef's Specials", href: '#chef-specials' },

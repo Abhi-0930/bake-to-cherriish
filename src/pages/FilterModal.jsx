@@ -155,7 +155,6 @@ const FilterPanel = ({ isOpen, onClose, filters, onApplyFilters }) => {
                  localFilters.variety === 'fruit' ? 'Fruit' :
                  localFilters.variety === 'nut' ? 'Nut' :
                  localFilters.variety === 'specialty' ? 'Specialty' :
-                 localFilters.variety === 'christmas' ? 'Christmas' :
                  localFilters.variety === 'brownie' ? 'Brownies' :
                  localFilters.variety === 'cookie' ? 'Cookies' :
                  localFilters.variety === 'muffin' ? 'Muffins' :
@@ -170,7 +169,6 @@ const FilterPanel = ({ isOpen, onClose, filters, onApplyFilters }) => {
                 { value: 'fruit', label: 'Fruit' },
                 { value: 'nut', label: 'Nut' },
                 { value: 'specialty', label: 'Specialty' },
-                { value: 'christmas', label: 'Christmas' },
                 { value: 'brownie', label: 'Brownies' },
                 { value: 'cookie', label: 'Cookies' },
                 { value: 'muffin', label: 'Muffins' },
@@ -205,8 +203,7 @@ const FilterPanel = ({ isOpen, onClose, filters, onApplyFilters }) => {
                  localFilters.itemType === 'cakes' ? 'Cakes' :
                  localFilters.itemType === 'brownies' ? 'Brownies' :
                  localFilters.itemType === 'cookies' ? 'Cookies' :
-                 localFilters.itemType === 'muffins' ? 'Muffins' :
-                 localFilters.itemType === 'christmas' ? 'Christmas' : 'All'}
+                 localFilters.itemType === 'muffins' ? 'Muffins' : 'All'}
               </span>
             </div>
             <div className="grid grid-cols-2 lg:grid-cols-1 gap-1 lg:gap-2">
@@ -215,8 +212,7 @@ const FilterPanel = ({ isOpen, onClose, filters, onApplyFilters }) => {
                 { value: 'cakes', label: 'Cakes' },
                 { value: 'brownies', label: 'Brownies' },
                 { value: 'cookies', label: 'Cookies' },
-                { value: 'muffins', label: 'Muffins' },
-                { value: 'christmas', label: 'Christmas' }
+                { value: 'muffins', label: 'Muffins' }
               ].map(option => (
                 <button
                   key={option.value}
