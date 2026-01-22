@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 // import heroImg from '../assets/image.jpg';
 
 // Import classic cake images
@@ -160,6 +160,7 @@ const muffinImages = {
 const ProductCard = ({ item, type, section }) => {
     const price = type === 'cake' ? item.half : type === 'muffin' ? item.muffin : item.price;
     const [imageLoaded, setImageLoaded] = useState(false);
+    const imgRef = useRef(null);
     
     // Get image height based on section
     const getImageHeight = () => {
@@ -212,7 +213,12 @@ const ProductCard = ({ item, type, section }) => {
     const imgSrc = getItemImage() || fallbackImg;
 
     useEffect(() => {
-      setImageLoaded(false);
+      const imgEl = imgRef.current;
+      if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) {
+        setImageLoaded(true);
+      } else {
+        setImageLoaded(false);
+      }
     }, [imgSrc]);
 
     return (
@@ -232,6 +238,7 @@ const ProductCard = ({ item, type, section }) => {
             />
           )}
           <img
+            ref={imgRef}
             src={imgSrc}
             alt={item.name}
             className="w-full h-full object-cover"
