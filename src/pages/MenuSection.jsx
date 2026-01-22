@@ -48,9 +48,11 @@ const MenuSection = ({ title, subtitle, items, type, id, section, showSearch = f
             </div>
           )}
           
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5">
+          <div className="flex gap-4 overflow-x-auto pb-4 scrollbar-hide md:grid md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 md:gap-4 lg:gap-5">
             {items.map((item, index) => (
-              <ProductCard key={index} item={item} type={type} section={section} />
+              <div key={index} className="flex-shrink-0 w-64 sm:w-72 md:w-auto">
+                <ProductCard item={item} type={type} section={section} />
+              </div>
             ))}
           </div>
         </div>
