@@ -17,6 +17,7 @@ import butterscotchImg from '../assets/classic-cakes/Butterscotch cake.webp';
 import chocolateImg from '../assets/classic-cakes/Chocolate cake.webp';
 import whiteForestImg from '../assets/classic-cakes/White forest cake.webp';
 import blackForestImg from '../assets/classic-cakes/Black forest cake.webp';
+import fallbackImg from '../assets/menu-items/classic-cake.webp';
 
 // Import tea cake images
 import carrotCakeImg from '../assets/tea-specials/carrot-cake.webp';
@@ -208,7 +209,7 @@ const ProductCard = ({ item, type, section }) => {
     };
 
     const imgHeight = parseInt(getImageHeight(), 10) || 240;
-    const imgSrc = getItemImage();
+    const imgSrc = getItemImage() || fallbackImg;
 
     useEffect(() => {
       setImageLoaded(false);
@@ -238,6 +239,12 @@ const ProductCard = ({ item, type, section }) => {
             width="400"
             height={imgHeight}
             onLoad={() => setImageLoaded(true)}
+            onError={(e) => {
+              if (e.currentTarget.src !== fallbackImg) {
+                e.currentTarget.src = fallbackImg;
+              }
+              setImageLoaded(true);
+            }}
             style={{ opacity: imageLoaded ? 1 : 0, transition: 'opacity 200ms ease' }}
           />
           
