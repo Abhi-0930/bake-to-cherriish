@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 // import heroImg from '../assets/image.jpg';
 
 // Import classic cake images
@@ -142,6 +142,7 @@ const muffinImages = {
 
 const ProductCard = ({ item, type, section }) => {
     const price = type === 'cake' ? item.half : type === 'muffin' ? item.muffin : item.price;
+    const [imageLoaded, setImageLoaded] = useState(false);
     
     // Get image height based on section
     const getImageHeight = () => {
@@ -187,6 +188,11 @@ const ProductCard = ({ item, type, section }) => {
     };
 
     const imgHeight = parseInt(getImageHeight(), 10) || 240;
+    const imgSrc = getItemImage();
+
+    useEffect(() => {
+      setImageLoaded(false);
+    }, [imgSrc]);
 
     return (
       <div
@@ -197,13 +203,22 @@ const ProductCard = ({ item, type, section }) => {
       >
         {/* Image */}
         <div className="relative" style={{ height: getImageHeight(), backgroundColor: 'var(--color-background)' }}>
+          {!imageLoaded && (
+            <div
+              className="absolute inset-0 animate-pulse"
+              style={{ backgroundColor: 'rgba(107,79,57,0.08)' }}
+              aria-hidden="true"
+            />
+          )}
           <img
-            src={getItemImage()}
+            src={imgSrc}
             alt={item.name}
             className="w-full h-full object-cover"
             loading="lazy"
             width="400"
             height={imgHeight}
+            onLoad={() => setImageLoaded(true)}
+            style={{ opacity: imageLoaded ? 1 : 0, transition: 'opacity 200ms ease' }}
           />
           
         </div>

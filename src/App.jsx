@@ -11,7 +11,6 @@ import NoResults from './pages/NoResults';
 import Footer from './pages/Footer';
 import AnimatedSearchInput from './components/AnimatedSearchInput';
 import LazySection from './components/LazySection';
-import SectionSkeleton from './components/SectionSkeleton';
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null); // 'menu' | 'premium' | 'chef-specials' | 'brownies' | 'cookies' | 'muffins' | null
@@ -170,10 +169,7 @@ const App = () => {
       )}
 
       {(!selectedCategory || selectedCategory === 'menu') && classicFiltered.length > 0 && (
-        <LazySection
-          minHeight={400}
-          fallback={<SectionSkeleton cards={classicFiltered.length || 4} imageHeight={260} />}
-        >
+        <LazySection minHeight={400}>
           <MenuSection 
             id="menu"
             title="Classic Cakes" 
@@ -189,10 +185,7 @@ const App = () => {
       )}
 
       {(!selectedCategory || selectedCategory === 'premium') && premiumFiltered.length > 0 && (
-        <LazySection
-          minHeight={400}
-          fallback={<SectionSkeleton cards={premiumFiltered.length || 4} imageHeight={240} />}
-        >
+        <LazySection minHeight={400}>
           <>
             <MenuSection 
               id="premium"
@@ -210,10 +203,7 @@ const App = () => {
       )}
 
       {(!selectedCategory || selectedCategory === 'chef-specials') && chefFiltered.length > 0 && (
-        <LazySection
-          minHeight={400}
-          fallback={<SectionSkeleton cards={chefFiltered.length || 4} imageHeight={240} />}
-        >
+        <LazySection minHeight={400}>
           <MenuSection 
             id="chef-specials"
             title="Chef's Speciality" 
@@ -230,11 +220,8 @@ const App = () => {
 
       {/* Individual Treat Sections */}
       {(!selectedCategory || selectedCategory === 'brownies') && browniesFiltered.length > 0 && (
-        <LazySection
-          minHeight={320}
-          fallback={<SectionSkeleton cards={browniesFiltered.length || 4} imageHeight={220} />}
-        >
-          <Suspense fallback={<SectionSkeleton cards={browniesFiltered.length || 4} imageHeight={220} />}>
+        <LazySection minHeight={320}>
+          <Suspense fallback={null}>
             <IndividualTreatSection treatType="brownies" searchQuery={searchQuery} />
           </Suspense>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -244,11 +231,8 @@ const App = () => {
       )}
 
       {(!selectedCategory || selectedCategory === 'cookies') && cookiesFiltered.length > 0 && (
-        <LazySection
-          minHeight={320}
-          fallback={<SectionSkeleton cards={cookiesFiltered.length || 4} imageHeight={220} />}
-        >
-          <Suspense fallback={<SectionSkeleton cards={cookiesFiltered.length || 4} imageHeight={220} />}>
+        <LazySection minHeight={320}>
+          <Suspense fallback={null}>
             <IndividualTreatSection treatType="cookies" searchQuery={searchQuery} />
           </Suspense>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -258,11 +242,8 @@ const App = () => {
       )}
 
       {(!selectedCategory || selectedCategory === 'muffins') && muffinsFiltered.length > 0 && (
-        <LazySection
-          minHeight={320}
-          fallback={<SectionSkeleton cards={muffinsFiltered.length || 4} imageHeight={220} />}
-        >
-          <Suspense fallback={<SectionSkeleton cards={muffinsFiltered.length || 4} imageHeight={220} />}>
+        <LazySection minHeight={320}>
+          <Suspense fallback={null}>
             <IndividualTreatSection treatType="muffins" searchQuery={searchQuery} />
           </Suspense>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
