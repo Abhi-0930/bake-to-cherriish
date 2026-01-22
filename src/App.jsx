@@ -10,7 +10,6 @@ const FilterPanel = React.lazy(() => import('./pages/FilterModal'));
 import NoResults from './pages/NoResults';
 import Footer from './pages/Footer';
 import AnimatedSearchInput from './components/AnimatedSearchInput';
-import LazySection from './components/LazySection';
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null); // 'menu' | 'premium' | 'chef-specials' | 'brownies' | 'cookies' | 'muffins' | null
@@ -170,7 +169,7 @@ const App = () => {
       )}
 
       {(!selectedCategory || selectedCategory === 'menu') && classicFiltered.length > 0 && (
-        <LazySection minHeight={400}>
+        <>
           <MenuSection 
             id="menu"
             title="Classic Cakes" 
@@ -182,29 +181,27 @@ const App = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        </LazySection>
+        </>
       )}
 
       {(!selectedCategory || selectedCategory === 'premium') && premiumFiltered.length > 0 && (
-        <LazySection minHeight={400}>
-          <>
-            <MenuSection 
-              id="premium"
-              title="Premium Cakes" 
-              subtitle="Luxurious flavors for special moments"
-              items={premiumFiltered} 
-              type="cake"
-              section="premium"
-            />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
-            </div>
-          </>
-        </LazySection>
+        <>
+          <MenuSection 
+            id="premium"
+            title="Premium Cakes" 
+            subtitle="Luxurious flavors for special moments"
+            items={premiumFiltered} 
+            type="cake"
+            section="premium"
+          />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
+          </div>
+        </>
       )}
 
       {(!selectedCategory || selectedCategory === 'chef-specials') && chefFiltered.length > 0 && (
-        <LazySection minHeight={400}>
+        <>
           <MenuSection 
             id="chef-specials"
             title="Chef's Speciality" 
@@ -216,11 +213,11 @@ const App = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        </LazySection>
+        </>
       )}
 
       {(!selectedCategory || selectedCategory === 'tea-cakes') && teaFiltered.length > 0 && (
-        <LazySection minHeight={400}>
+        <>
           <MenuSection 
             id="tea-cakes"
             title="Tea Cakes"
@@ -232,41 +229,41 @@ const App = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        </LazySection>
+        </>
       )}
 
       {/* Individual Treat Sections */}
       {(!selectedCategory || selectedCategory === 'brownies') && browniesFiltered.length > 0 && (
-        <LazySection minHeight={320}>
+        <>
           <Suspense fallback={null}>
             <IndividualTreatSection treatType="brownies" searchQuery={searchQuery} />
           </Suspense>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        </LazySection>
+        </>
       )}
 
       {(!selectedCategory || selectedCategory === 'cookies') && cookiesFiltered.length > 0 && (
-        <LazySection minHeight={320}>
+        <>
           <Suspense fallback={null}>
             <IndividualTreatSection treatType="cookies" searchQuery={searchQuery} />
           </Suspense>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        </LazySection>
+        </>
       )}
 
       {(!selectedCategory || selectedCategory === 'muffins') && muffinsFiltered.length > 0 && (
-        <LazySection minHeight={320}>
+        <>
           <Suspense fallback={null}>
             <IndividualTreatSection treatType="muffins" searchQuery={searchQuery} />
           </Suspense>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
           </div>
-        </LazySection>
+        </>
       )}
 
 
