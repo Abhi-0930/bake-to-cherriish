@@ -96,6 +96,7 @@ const App = () => {
   const classicFiltered = menuData.classicCakes.filter(matches);
   const premiumFiltered = menuData.premiumCakes.filter(matches);
   const chefFiltered = menuData.chefSpeciality.filter(matches);
+  const teaFiltered = menuData.teaCakes.filter(matches);
   
   // Check if treats section has any matching results
   const browniesFiltered = menuData.brownies.filter(matches);
@@ -103,7 +104,7 @@ const App = () => {
   const muffinsFiltered = menuData.muffins.filter(matches);
 
   // Check if there are any results at all
-  const hasAnyResults = classicFiltered.length > 0 || premiumFiltered.length > 0 || chefFiltered.length > 0 || browniesFiltered.length > 0 || cookiesFiltered.length > 0 || muffinsFiltered.length > 0;
+  const hasAnyResults = classicFiltered.length > 0 || premiumFiltered.length > 0 || chefFiltered.length > 0 || teaFiltered.length > 0 || browniesFiltered.length > 0 || cookiesFiltered.length > 0 || muffinsFiltered.length > 0;
   
   // Check if filters are applied (not default values)
   const hasActiveFilters = filters.priceRange !== 'all' || filters.variety !== 'all' || filters.itemType !== 'all';
@@ -211,6 +212,22 @@ const App = () => {
             items={chefFiltered} 
             type="single"
             section="chef"
+          />
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />
+          </div>
+        </LazySection>
+      )}
+
+      {(!selectedCategory || selectedCategory === 'tea-cakes') && teaFiltered.length > 0 && (
+        <LazySection minHeight={400}>
+          <MenuSection 
+            id="tea-cakes"
+            title="Tea Cakes"
+            subtitle="Light, cozy bakes for every tea-time craving"
+            items={teaFiltered} 
+            type="cake"
+            section="tea"
           />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="border-t mx-auto w-10/12" style={{ borderColor: 'rgba(107,79,57,0.2)' }} />

@@ -18,6 +18,13 @@ import chocolateImg from '../assets/classic-cakes/Chocolate cake.webp';
 import whiteForestImg from '../assets/classic-cakes/White forest cake.webp';
 import blackForestImg from '../assets/classic-cakes/Black forest cake.webp';
 
+// Import tea cake images
+import carrotCakeImg from '../assets/tea-specials/carrot-cake.webp';
+import marbleCakeImg from '../assets/tea-specials/marble-cake.webp';
+import almondCakeImg from '../assets/tea-specials/almond-cake.webp';
+import chocochipButterCakeImg from '../assets/tea-specials/chocochip-butter-cake.webp';
+import bananaCakeImg from '../assets/tea-specials/banana-cake.webp';
+
 // Import premium cake images
 import lycheeImg from '../assets/premium-cakes/Lyche cake.webp';
 import tresLechesImg from '../assets/premium-cakes/Rich tres leches cake.webp';
@@ -85,6 +92,15 @@ const classicCakeImages = {
   'Black Forest Cake': blackForestImg
 };
 
+// Create image mapping for tea cakes
+const teaCakeImages = {
+  'Carrot Cake': carrotCakeImg,
+  'Marble Cake': marbleCakeImg,
+  'Almond Cake': almondCakeImg,
+  'Chocochip Butter Cake': chocochipButterCakeImg,
+  'Banana Cake': bananaCakeImg
+};
+
 // Create image mapping for premium cakes
 const premiumCakeImages = {
   'Lychee Cake': lycheeImg,
@@ -150,12 +166,16 @@ const ProductCard = ({ item, type, section }) => {
       if (section === 'classic') return '260px';
       if (section === 'premium') return '240px';
       if (section === 'chef') return '240px';
+      if (section === 'tea') return '240px';
       return '220px'; // default for treats
     };
     
     // Get the appropriate image for the item
     const getItemImage = () => {
       if (type === 'cake') {
+        if (teaCakeImages[item.name]) {
+          return teaCakeImages[item.name];
+        }
         if (christmasCakeImages[item.name]) {
           return christmasCakeImages[item.name];
         }

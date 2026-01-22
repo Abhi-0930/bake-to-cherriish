@@ -5,6 +5,7 @@ import React from 'react';
 import classicCakeImg from '../assets/menu-items/classic-cake.webp';
 import premiumCakeImg from '../assets/menu-items/premium-cake.webp';
 import chefSpecialityImg from '../assets/menu-items/chef-speciality.webp';
+import teaCakesImg from '../assets/tea-specials/carrot-cake.webp';
 import brownieImg from '../assets/menu-items/brownie.webp';
 import cookieImg from '../assets/menu-items/cookie.webp';
 import muffinsImg from '../assets/menu-items/muffins.webp';
@@ -13,6 +14,7 @@ const categoryImages = {
   'Classic Cakes': classicCakeImg,
   'Premium Cakes': premiumCakeImg,
   "Chef's Specials": chefSpecialityImg,
+  'Tea Cakes': teaCakesImg,
   'Brownies': brownieImg,
   'Cookies': cookieImg,
   'Muffins & Cupcakes': muffinsImg
@@ -22,6 +24,7 @@ const categories = [
   { label: 'Classic Cakes', href: '#menu' },
   { label: 'Premium Cakes', href: '#premium' },
   { label: "Chef's Specials", href: '#chef-specials' },
+  { label: 'Tea Cakes', href: '#tea-cakes' },
   { label: 'Brownies', href: '#brownies' },
   { label: 'Cookies', href: '#cookies' },
   { label: 'Muffins & Cupcakes', href: '#muffins' }

@@ -55,6 +55,13 @@ export const menuData = {
     { name: 'Sugar Cloud Cheesecake', price: 1649, desc: 'Creamy cheesecake with a buttery biscuit base. Light, fluffy, and absolutely divine. Available in 1kg.', rating: 4.9, time: '50 min' },
     { name: 'Guilt-Free Goodness', price: 1699, desc: 'Healthy cake made with natural ingredients and no refined sugar. Delicious and nutritious. Available in 1kg.', rating: 4.8, time: '50 min', badge: 'Healthy' }
   ],
+  teaCakes: [
+    { name: 'Carrot Cake', half: 240, full: 480, sizeHalfLabel: '250gm', sizeFullLabel: '500gm', desc: 'Incredibly moist and warmly spiced with cinnamon, packed with fresh grated carrots.', rating: 4.8, time: '35 min' },
+    { name: 'Marble Cake', half: 240, full: 480, sizeHalfLabel: '250gm', sizeFullLabel: '500gm', desc: 'A timeless classic swirling rich cocoa and buttery vanilla batters together. Enjoy the best of both worlds in every bite.', rating: 4.8, time: '35 min' },
+    { name: 'Almond Cake', half: 240, full: 480, sizeHalfLabel: '250gm', sizeFullLabel: '500gm', desc: 'An elegant, golden sponge cake made with almond flour. Topped with toasted almond flakes.', rating: 4.7, time: '35 min' },
+    { name: 'Chocochip Butter Cake', half: 240, full: 480, sizeHalfLabel: '250gm', sizeFullLabel: '500gm', desc: 'A dense, rich butter cake studded with chocochips. Each bite offers a perfect balance of golden crumb and melty cocoa goodness.', rating: 4.8, time: '35 min' },
+    { name: 'Banana Cake', half: 240, full: 480, sizeHalfLabel: '250gm', sizeFullLabel: '500gm', desc: 'Moist, rich cake made with flavourful ripe banana and creamy milk chocolate chunks in between.', rating: 4.7, time: '35 min' }
+  ],
   brownies: [
     { name: 'Classic Brownie', price: 99, desc: 'Rich, fudgy chocolate brownie with a perfect chewy texture. A timeless favorite.', rating: 4.6, time: '20 min' },
     { name: 'Nutella Brownie', price: 109, desc: 'Chocolate brownie swirled with creamy Nutella. Decadent and irresistible.', rating: 4.8, time: '20 min' },
