@@ -9,6 +9,7 @@ import plumCakeImg from '../assets/chirstmas-cakes/plum-cake.webp';
 import bananaBreadImg from '../assets/chirstmas-cakes/banana-bread.webp';
 
 import vanillaImg from '../assets/classic-cakes/Vanilla cake.webp';
+import lazyLoadingImg from '../assets/lazy-loading-image.jpg';
 import pineappleImg from '../assets/classic-cakes/Pineapple cake.webp';
 import strawberryImg from '../assets/classic-cakes/Strawberry cake.webp';
 import blueberryImg from '../assets/classic-cakes/Blueberry cake.webp';
@@ -232,8 +233,12 @@ const ProductCard = ({ item, type, section }) => {
         <div className="relative" style={{ height: getImageHeight(), backgroundColor: 'var(--color-background)' }}>
           {!imageLoaded && (
             <div
-              className="absolute inset-0 animate-pulse"
-              style={{ backgroundColor: 'rgba(107,79,57,0.08)' }}
+              className="absolute inset-0"
+              style={{
+                backgroundImage: `url(${lazyLoadingImg})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
               aria-hidden="true"
             />
           )}
