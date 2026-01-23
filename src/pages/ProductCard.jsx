@@ -158,6 +158,8 @@ const muffinImages = {
   'Mix Berry': mixBerryMuffinImg
 };
 
+const loadedImages = new Set();
+
 const ProductCard = ({ item, type, section }) => {
     const price = type === 'cake' ? item.half : type === 'muffin' ? item.muffin : item.price;
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -214,8 +216,13 @@ const ProductCard = ({ item, type, section }) => {
     const imgSrc = getItemImage() || fallbackImg;
 
     useEffect(() => {
+      if (loadedImages.has(imgSrc)) {
+        setImageLoaded(true);
+        return;
+      }
       const imgEl = imgRef.current;
       if (imgEl && imgEl.complete && imgEl.naturalWidth > 0) {
+        loadedImages.add(imgSrc);
         setImageLoaded(true);
       } else {
         setImageLoaded(false);
@@ -250,13 +257,18 @@ const ProductCard = ({ item, type, section }) => {
             loading="lazy"
             width="400"
             height={imgHeight}
-            onLoad={() => setImageLoaded(true)}
+            onLoad={() => {
+              loadedImages.add(imgSrc);
+              setImageLoaded(true);
+            }}
             onError={(e) => {
               if (e.currentTarget.src !== fallbackImg) {
                 e.currentTarget.src = fallbackImg;
               }
+              loadedImages.add(imgSrc);
               setImageLoaded(true);
             }}
+            decoding="async"
             style={{ opacity: imageLoaded ? 1 : 0, transition: 'opacity 200ms ease' }}
           />
           

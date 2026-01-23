@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from 'react';
+import React, { Suspense, useEffect, useState } from 'react';
 import { menuData } from './constants';
 import { Filter } from 'lucide-react';
 import Header from './pages/Header';
@@ -10,6 +10,7 @@ const FilterPanel = React.lazy(() => import('./pages/FilterModal'));
 import NoResults from './pages/NoResults';
 import Footer from './pages/Footer';
 import AnimatedSearchInput from './components/AnimatedSearchInput';
+import { allProductImages } from './assets/imageManifest';
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null); // 'menu' | 'premium' | 'chef-specials' | 'brownies' | 'cookies' | 'muffins' | null
@@ -20,6 +21,21 @@ const App = () => {
     variety: 'all',
     itemType: 'all'
   });
+
+  useEffect(() => {
+    const warmCache = () => {
+      allProductImages.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    };
+
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(warmCache, { timeout: 2000 });
+    } else {
+      setTimeout(warmCache, 800);
+    }
+  }, []);
 
   const handleCategoryToggle = (id) => {
     setSelectedCategory((prev) => (prev === id ? null : id));
